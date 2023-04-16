@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Home page of students affairs system">
+        <title>Home</title>
+        <link rel="stylesheet" href="edit.css">
+    </head>
+    <body>
+
+          
+<section>
+  <div class="wrapper">
+    <div class="profile">
+      <div class="content">
+        <h1>Edit Profile</h1>
+        <form action="">
+        <!-- first name -->
+          <fieldset>
+            <div class="grid-35">
+              <label for="fname">First Name</label>
+            </div>
+            <div class="grid-65">
+              <input type="text" id="fname" tabindex="1" />
+            </div>
+          </fieldset>
+           <!-- Last name-->
+          <fieldset>
+            <div class="grid-35">
+              <label for="lname">Last Name</label>
+            </div>
+            <div class="grid-65">
+              <input type="text" id="lname" tabindex="2" />
+            </div>
+          </fieldset>
+
+          </fieldset>
+          <!--Student ID-->
+          <fieldset>
+            <div class="grid-35">
+              <label for="studentID">Student ID</label>
+            </div>
+            <div class="grid-65">
+              <input type="text" id="studentID" tabindex="8" />
+            </div>
+          </fieldset>
+          <!-- GPA -->
+          <fieldset>
+            <div class="grid-35">
+              <label for="GPA">GPA</label>
+            </div>
+            <div class="grid-65">
+              <input type="text" id="GPA" tabindex="5" />
+            </div>
+          </fieldset>
+         <!-- Status -->
+         <fieldset>
+            <div class="grid-35">
+              <label for="Status">Status</label>
+            </div>
+            <div class="grid-65">
+              <select name="work" id="Status" tabindex="7">
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+              </select>
+            </div>
+          </fieldset>
+          <!-- Email -->
+          <fieldset>
+            <div class="grid-35">
+              <label for="email">Email Address</label>
+            </div>
+            <div class="grid-65">
+              <input type="email" id="email" tabindex="6" />
+            </div>
+          </fieldset>
+          <!-- Birth Date -->
+          <fieldset>
+            <div class="grid-35">
+                <label for="Date of Birth">Birth Date</label>
+              </div>
+              <div class="grid-65">
+                <input type="date" name="date" id="date" tabindex="6">
+              </div>
+        
+         </fieldset>
+         <!-- Gender -->
+          <fieldset>
+            <div class="grid-35">
+              <label for="Gender">Gender</label>
+            </div>
+            <div class="grid-65">
+              <select name="work" id="Gender" tabindex="7">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+            </div>
+          </fieldset>
+          <!-- department -->
+          <fieldset>
+            <div class="grid-35">
+              <label for="Department">Department</label>
+            </div>
+            <input class="department"  id="dept" name="status" readonly="de" type="text" value=>
+          </fieldset>
+          <!-- mobile number -->
+          <fieldset>
+            <div class="grid-35">
+              <label for="mobile">Mobile Number</label>
+            </div>
+            <div class="grid-65">
+              <input type="text" id="mobile" tabindex="12" />
+            </div>
+          </fieldset>
+
+            <input type="button" class="Btn clear" value="Cancel" />
+            <input type="submit" class="Btn" value="Save Changes" onclick="save()"/>
+            
+          
+    
+        </form>
+      </div>
+    </div>
+  </div>
+</section> 
+<script src="main.js"></script>
+</body>
+</html>

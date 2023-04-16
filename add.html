@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Add New Students</title>
+        <meta name="description" content="adding new students to the system" />
+    </head>
+    <body>
+        <form action="" method="get" target="_blank">
+            <header>
+                <h1>Add Students</h1>
+                <nav class="navigations">
+                    <ul class="main-links">
+                        <li><a href="Home.html">Home</a></li>
+                        <!-- Home page including: navBar, welcoming section, search for student by name section -->
+                        <li>
+                            <a >Students Information ▼</a>
+                            <!-- Drop Down list for student information -->
+                            <ul class="student-information-links">
+                                <li><a href="add.html"> Add new student</li> <!-- Add a new student to the system (Adham mahmoud) -->
+                                <li><a href="edit.html"> Edit an existing student</li>
+                                <!-- Edit information of an existing student in system: udpate and delete (Mazen)-->
+                                <li><a href="table.html"> All students</li>
+                                <!-- List all students with applity to activete and deactivate students (Abdel rahman)-->
+                                <li><a href="department.html">department assignment page</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">About Us</a></li>
+                        
+                        <li><a href="login.html" id="login-link">Login</a></li> <!-- link to login page (Mohammed hesham)-->
+                    </ul>
+                </nav>
+            </header>
+            <div>
+                <p><h3>Please fill the following fields:</h3></p>
+            </div>
+            <section>
+                <label for="name">Student Name: </label>
+                <input type="text" name="name" id="name" placeholder="Enter Student name">
+            </section>
+            <br>
+            <section>
+                <label for="id">Student ID: </label>
+                <input type="number" id="id" placeholder="20210000" min="20200000">
+            </section>
+            <br>
+            <section>
+                <label for="mail">E-mail: </label>
+                <input type="email" id="mail" placeholder="student@mail.com">
+            </section>
+            <br>
+            <section>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" placeholder="+20 ">
+            </section>
+            <br>
+            <section>
+                <label for="level">Level: </label>
+                <select name="Level" id="level">
+                    <option value="1">Level 1</option>
+                    <option value="2">Level 2</option>
+                    <option value="3">Level 3</option>
+                    <option value="4">Level 4</option>
+                </select>
+            </section>
+            <br>
+            <section>
+                <label for="dep">Department: </label>
+                <select name="department" id="dep">
+                    <optgroup>
+                        <option value="1">CS</option>
+                        <option value="1">IS</option>
+                        <option value="1">IT</option>
+                        <option value="1">Cyper Secutrity</option>
+                        <option value="1">Software Engineering</option>
+                    </optgroup>
+                </select>
+            </section>
+            <br>
+            <section>
+                <label>Status: </label>
+                <input type="radio" name="active">
+                <label for="active">Active</label>
+                <input type="radio" name="inactive">
+                <label for="inactive">Inactive</label>
+            </section>
+            <br>
+            <section>
+                <label for="gba">GBA: </label>
+                <input type="number" id="gba" min="0" max="4">
+            </section>
+            <br>
+            <section>
+                <label for="Bdate">Birth Date:</label >
+                <input type="date" id="Ddate">
+            </section>
+            <br>
+            <section>
+                <label for="gender">Gender: </label>
+                <input type="radio" id="gender" name="male" value="male">
+                <label for="gender">Male</label>
+                <input type="radio" id="gender" name="female" value="feale">
+                <label for="gender">Female</label>
+            </section>
+            <br>
+            <section>
+                <input type="submit" name="submit">
+                <input type="reset" name="reset">
+            </section>
+            <br>
+            <footer>about us</footer>
+        </form>
+    </body>
+</html>

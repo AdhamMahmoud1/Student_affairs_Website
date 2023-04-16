@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <meta charset="UTF-8"/>
+   </head>
+   <body>
+    <header class="main-header">
+            <!-- main header contains logo and nav-->
+            <h1 id="logo">Students Affiars System</h2>
+            <!-- A nav containing links to other pages -->
+            <nav class="navigations">
+                <ul class="main-links">
+                    <li><a href="#">Home</a></li>                           <!-- Home page including: navBar, welcoming section, search for student by name section -->
+                    <li>
+                        <a >Students Information ▼</a>
+                        <!-- Drop Down list for student information -->
+                        <ul class="student-information-links">              
+                            <li><a href="add.html"> Add new student</li>               <!-- Add a new student to the system (Adham mahmoud) -->       
+                            <li><a href="edit.html"> Edit an existing student</li>  <!-- Edit information of an existing student in system: udpate and delete (Mazen)--> 
+                            <li><a href="table.html"> All students</li>              <!-- List all students with applity to activete and deactivate students (Abdel rahman)--> 
+                            <li><a href="department.html">department assignment page</a></li>
+                            </ul> 
+                    </li>
+                   
+                    
+                    <li><a href="login.html" id="login-link">Login</a></li>          <!-- link to login page (Mohammed hesham)-->
+                </ul>
+            </nav>
+        </header>
+     <h1>Department assignment page</h1>
+     <form>
+        <div>
+            <label>Search</label>
+            <input type="search" name="user">
+        </div>
+        <fieldset>
+            <h3>Name:</h3>
+            <h3>ID:</h3>
+            <h3>Level:</h3>
+            <label for="dep">Department:</label>
+            <select name="department" id="dep">
+                <option value="CS">CS</option>
+                <option value="IT">IT</option>
+                <option value="AI">AI</option>
+                <option value="IS">IS</option>
+                <option value="DS">DS</option>
+            </select>
+        </fieldset>
+        <input type="submit">
+     </form>
+   </body> 
+</html>
