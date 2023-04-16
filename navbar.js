@@ -16,7 +16,16 @@ const passwordInput = document.querySelector(".password-input input")
 
 let idWarningMsg = document.createElement("span")
 idWarningMsg.textContent = "* ID Must only contain numbers"
-idWarningMsg.classList.add("warning")
+idWarningMsg.classList.add("warning");
 
 
 // Dropdown list on mouse click functionality
+const studentsInfoLink = document.querySelector(".dropdown-list a")
+const dropdownMenu = document.querySelector(".dropdown-container")
+
+
+studentsInfoLink.addEventListener("click", ()=> {
+  dropdownMenu.classList.toggle("viewed")
+
+  console.log("clicked")
+})
