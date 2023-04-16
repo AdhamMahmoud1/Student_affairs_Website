@@ -219,3 +219,17 @@ input[type=checkbox].toggle:checked + label:before{
     left: 68px;
     background-color: var(--stateSwitch-active-color); 
 }
+
+
+tr:hover{
+  background-color: #b83717;
+  cursor: pointer;
+}
+
+tr.selected{
+  background-color: #b83717;
+}
+
+.edit-btn{
+  padding: 20px 80px;
+}

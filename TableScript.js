@@ -19,3 +19,27 @@ function tableSearch() {
         }
     }
 }
+
+const rows = document.querySelectorAll('table tr');
+
+rows.forEach(function(row) {
+  row.addEventListener('click', function(event) {
+    const cells = event.target.parentElement.querySelectorAll('td');
+    const id = cells[0].textContent;
+
+    
+    const url = `edit.html?id=${id}`;
+    window.location.href = url;
+
+    
+    console.log(id);
+  });
+});
+
+/*
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const id = urlParams.get('id');
+console.log(id);
+
+*/
