@@ -5,45 +5,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FCAI | Login</title>
+    <script src="https://kit.fontawesome.com/5f0efd57ab.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/login.css">
 </head>
 <body>
-  <header class="main-header">
-    <!-- main header contains logo and nav-->
-    <h1 id="logo">Students Affiars System</h2>
-    <!-- A nav containning links to other pages-->
-    <nav class="navigations">
-        <ul class="main-links">
-            <li><a href="login.html">Home</a></li>                           <!-- Home page including: navBar, welcoming section, search for student by name section -->
-            <li><a href="#">About Us</a></li>
-            <li><a href="login.html" id="login-link">Login</a></li>          <!-- link to login page (Mohammed hesham)-->
+
+  <nav>
+    <div class="container">
+      <a href="./Home.html" class="logo-container">
+        <img src="assets/cu-logo.png" alt="" class="logo">
+      </a>
+      
+  
+      <div class="nav-list-container">
+        <ul class="nav-list">
+          <li><a href="">Home</a></li>
+          <li class="dropdown-list">
+            <a href="">Students info</a>
+            
+            <ul class="dropdown-container">
+              <li><a href="">Add new student</a></li>
+              <li><a href="">Edit an existing student</a></li>
+              <li><a href="">All students</a></li>
+            </ul> 
+      
+          </li>
+          <li><a href="">About</a></li>
         </ul>
-    </nav>
-  </header>
-  <div class="container">
-    <form>
-        <div class="id-input">
-          <label for="user-id">ID :</label>
-          <input type="text" placeholder="Enter Your ID" name="user-id" required>
+        <button class="login-button">Login</button>
+      </div>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+
+
+  </nav>
+
+  
+  <form>
+      <div class="form-conatiner">
+        <h1 class="form-heading">login</h1>
+        
+        <div class="form-data">
+          
+          <div class="id-input">
+            <label for="user-id">ID</label>
+            <input type="text" placeholder="Type your ID" name="user-id" required>
+            <i class="fa fa-solid fa-id-card id-icon"></i>
+          </div>
+
+          <div class="password-input">
+            <label for="pass">Password</label>
+            <input type="password" placeholder="Type your password" name="pass" required>
+            <i class="fa fa-solid fa-lock password-icon"></i>
+          </div>
+          
           
         </div>
-
-
-        <div class="password-input">
-          <label for="pass">Password :</label>
-          <input type="password" placeholder="Enter Your Password" name="pass" required>
-        </div>
-
-        <button type="submit">Login</button>
+        <button type="submit" class="submit-btn">Login</button>
         
-        <div class="remember-me">
-          <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
-          </label>          
-        </div>
+      </div>
+
+    </form>
 
 
-      </form>
-    </div>
-      
+
+    <script src="navbar.js"></script>
+    <script src="login.js"></script>
 </body>
 </html>
