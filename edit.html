@@ -8,13 +8,13 @@
     </head>
     <body>
 
-          
+        
 <section>
   <div class="wrapper">
     <div class="profile">
       <div class="content">
         <h1>Edit Profile</h1>
-        <form action="">
+        <form id="edit">
         <!-- first name -->
           <fieldset>
             <div class="grid-35">
@@ -41,7 +41,7 @@
               <label for="studentID">Student ID</label>
             </div>
             <div class="grid-65">
-              <input type="text" id="studentID" tabindex="8" />
+              <input type="text" id="ID" tabindex="8" />
             </div>
           </fieldset>
           <!-- GPA -->
@@ -101,7 +101,7 @@
             <div class="grid-35">
               <label for="Department">Department</label>
             </div>
-            <input class="department"  id="dept" name="status" readonly="de" type="text" value=>
+            <input class="department"  id="dept" name="status" readonly="de" type="text" >
           </fieldset>
           <!-- mobile number -->
           <fieldset>
@@ -113,8 +113,9 @@
             </div>
           </fieldset>
 
-            <input type="button" class="Btn clear" value="Cancel" />
-            <input type="submit" class="Btn" value="Save Changes" onclick="save()"/>
+            <input type="reset" class="Btn clear" value="reset"/>
+            <!-- <input type="submit" class="Btn" value="Save Changes" /> -->
+            <button class="Btn" onclick="save();">Save Changes</button>
             
           
     
