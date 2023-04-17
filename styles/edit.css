@@ -1,6 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
 @import url(https://fonts.googleapis.com/css?family=Montez);
-@import url(./navbar.css);
 
 body{
   background-color: #f5f5f5;  
@@ -21,7 +20,7 @@ body{
   margin: 20px auto;
   margin-bottom: 100px;
   background-color: #fff;
-  border-top: 5px solid var(--green);
+  border-top: 5px solid #3991cb;
   border-radius: 0 0 5px 5px;
   box-shadow: 0 2.5px 5px #ccc;
 }
@@ -58,15 +57,15 @@ label[for="avatar"]{
   background-color: #ddd;
   padding: 10px 15px;
   border-radius: 3px;
-  box-shadow: inset 0 0 0 2px var(--green),
-              0 2px 0 0 var(--green);
+  box-shadow: inset 0 0 0 2px #3991cb,
+              0 2px 0 0 rgba(57,203,88,0.5);
   cursor: pointer;
   transition: 0.5s ease;
 }
 span.btn:hover{
   opacity: 1;
   color: #fff;
-  background-color: var(--green);
+  background-color: rgba(57,203,88,1);
   /* background-color: #3991cb; */
 }
 .profile:hover .btn{
@@ -86,7 +85,7 @@ fieldset textarea,input{
   font-size: 15px;
   color: #333;
   background-color: #f7f7f7;
-  box-shadow: 0 0 0 1px var(--green);
+  box-shadow: 0 0 0 1px #3991cb;
   padding: 5px;
   width: 75%;
   margin: 5px auto;
@@ -100,11 +99,11 @@ fieldset textarea{
   max-height: 60px;
 }
 fieldset textarea:hover,input:hover{
-  box-shadow: 0 0 0 1px var(--green);
+  box-shadow: 0 0 0 1px #3991cb;
   background-color: #fff;
 }
 fieldset textarea:focus,input:focus{
-  box-shadow: 0 0 0 1px var(--green),
+  box-shadow: 0 0 0 1px #3991cb,
               inset 0 2px 5px -1px rgba(0,0,0,0.25);
 }
 
@@ -151,7 +150,7 @@ select{
   width: 80%;
   padding: 7px 10px;
   background-color: #f5f5f5;
-  border: 1px solid var(--green);
+  border: 1px solid #3991cb;
   border-radius: 2.5px;
   outline: 0;
 }
@@ -184,14 +183,14 @@ fieldset:last-child{
   font-size: 16px;
   color: #fff;
   cursor: pointer;
-  background-color: var(--green);
-  box-shadow: inset 0 0 0 2px var(--green),
+  background-color: #3991cb;
+  box-shadow: inset 0 0 0 2px #3991cb
               0 2px 0 0 rgba(57, 125, 203, 0.5);
   transition: 0.5s ease;
 }
 .Btn:hover{
   
-  background-color: var(--green);
+  background-color: #3991cb;
 }
 .clear {
   float: right;
@@ -203,9 +202,9 @@ fieldset:last-child{
  .edit {
   width: 50px;
   color: #fff;
-  background-color: var(--green);
-  box-shadow: inset 0 0 0 2px var(--green),
-              0 2px 0 0 var(--green);
+  background-color: #38a7f6;
+  box-shadow: inset 0 0 0 2px #38a7f6,
+              0 2px 0 0 #38a7f6;
  }
 
 /*Media Queries
