@@ -1,4 +1,4 @@
-@import url(../styling/navbar.css);
+@import url(../styles/navbar.css);
 
 
 section
@@ -14,7 +14,7 @@ section
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url(../assests/cairo_university.jpeg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url(../assets/cairo_university.jpeg);
     background-size: cover;
     background-position: center;
     
