@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <meta charset="UTF-8"/>
+   </head>
+   <body>
+    <nav>
+        <div class="container">
+          <a href="./Home.html" class="logo-container">
+            <img src="assets/cu-logo.png" alt="" class="logo">
+          </a>
+          
+      
+          <div class="nav-list-container">
+            <ul class="nav-list">
+              <li><a href="./Home.html">Home</a></li>
+              <li class="dropdown-list">
+                <a href="#">Students info</a>
+                
+                <ul class="dropdown-container">
+                  <li><a href="./add.html">Add new student</a></li>
+                  <li><a href="./department.html">Department assignment page</a></li>
+                  <li><a href="./table.html">All students</a></li>
+                </ul> 
+          
+              </li>
+              <li><a href="#">About</a></li>
+            </ul>
+            <button class="login-button"><a href="./login.html">Login</a></button>
+          </div>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </nav>
+     <h1>Department assignment page</h1>
+     <form>
+        <div>
+            <label>Search</label>
+            <input type="search" name="user">
+        </div>
+        <fieldset>
+            <h3>Name:</h3>
+            <h3>ID:</h3>
+            <h3>Level:</h3>
+            <label for="dep">Department:</label>
+            <select name="department" id="dep">
+                <option value="CS">CS</option>
+                <option value="IT">IT</option>
+                <option value="AI">AI</option>
+                <option value="IS">IS</option>
+                <option value="DS">DS</option>
+            </select>
+        </fieldset>
+        <input type="submit">
+     </form>
+   </body> 
+</html>
