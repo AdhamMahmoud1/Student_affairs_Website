@@ -54,35 +54,7 @@ function addDataToTablet(){
   }
 }
 
-let student = [
-  {
-    fname : "mohamed",
-    lname : "hesham",
-    id : "20210313",
-    gpa : 3.6,
-    email : "mohamed@gmail.com",
-    date : "12-19-2003",
-    gender : "Male",
-    dept : 'CS',
-    status : "Active",
-    mobile : "0120000321",
-    level : "second level"
-  },
-  {
-    fname : "mazen",
-    lname : "mahmoud",
-    id : "20211003",
-    gpa : 3.7,
-    email : "mazen@gmail.com",
-    date : "2002-06-01",
-    gender : "Male",
-    dept : 'IT',
-    status : "Inactive",
-    mobile : "0110000441",
-    level : "second level"
-  }
-]
-localStorage.setItem('students', JSON.stringify(student))
+
 
 addDataToTablet()
 
