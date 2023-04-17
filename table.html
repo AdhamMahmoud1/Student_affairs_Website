@@ -11,42 +11,21 @@
 
 
 <body>
-    <nav>
-        <div class="container">
-          <a href="./Home.html" class="logo-container">
-            <img src="assets/cu-logo.png" alt="" class="logo">
-          </a>
-          
-      
-          <div class="nav-list-container">
-            <ul class="nav-list">
-              <li><a href="">Home</a></li>
-              <li class="dropdown-list">
-                <a href="#">Students info</a>
-                
-                <ul class="dropdown-container">
-                  <li><a href="add.html">Add new student</a></li>
-                  <li><a href="department.html">Assign Department</a></li>
-                  <li><a href="table.html">All students</a></li>
-                </ul> 
-          
-              </li>
-              <li><a href="">About</a></li>
-            </ul>
-           
-          </div>
-          <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
-        </div>
-    
-    
-      </nav>
-    
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#">Student information</a>
+                <ul class="dropdown">
+                    <li><a href="#">Add student</a></li>
+                    <li><a href="#">Edit Student</a></li>
+                    <li><a href="#">All students</a></li>
+                </ul>
+            </li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
 
-    <div class="content">
+    <div class="container">
         <div class="search-Container">
                 <!-- <label class="Search-icon" for="myInput"><i class='bx bx-search'></i></label>  -->
                 <input type="text" id="myInput" onkeyup="tableSearch()" placeholder="Search For Student">
