@@ -1,60 +1,65 @@
-localStorage.user1 = JSON.stringify( {
-  name: 'ahmed',
-  id: '2021018',
-  level: 1,
-});
-localStorage.user2 = JSON.stringify( {
-  name: 'mina',
-  id: '2021117',
-  level: 3,
-});
+const nm = document.getElementById('nm');
+const iddd = document.getElementById('idd');
+const level = document.getElementById('level');
+const chosenDept = document.getElementById('dep')
 
-function check(){
-  const nmm=document.getElementById('nm');
-  const iddd=document.getElementById('idd');
-  const levl=document.getElementById('level');
-  for(let i=0;i<2;i++){
-    if(document.getElementById("txt").value==(JSON.parse(localStorage.getItem(localStorage.key(i))).id)){
-      if((JSON.parse(localStorage.getItem(localStorage.key(i))).level)<3){
-        //document.getElementById("dep").remove();
-      }
-      //let stud_level=localStorage.getItem(localStorage.key(i)).level;
-      nmm.innerHTML=(JSON.parse(localStorage.getItem(localStorage.key(i))).name);
-      iddd.innerHTML=(JSON.parse(localStorage.getItem(localStorage.key(i))).id);
-      levl.innerHTML=(JSON.parse(localStorage.getItem(localStorage.key(i))).level);
+
+console.log('h')
+
+let data = JSON.parse(localStorage.getItem('students'))
+
+
+
+
+
+const enteredID = document.getElementById('txt')
+
+let searchBtn = document.querySelector('#mybutton')
+
+searchBtn.addEventListener('click', ()=>{
+  
+  
+  
+  
+  
+  for(let i = 0 ; i < data.length;i++){
+    // console.log(data[i].id)
+   
+    if(data[i].id === enteredID.value){
+      // console.log(enteredID)
+
+      console.log(data[i].id)
+      nm.textContent = data[i].fname + ' ' + data[i].lname;
+      iddd.textContent = data[i].id
+      level.textContent = data[i].level
+
+      chosenDept.value = data[i].dept
     }
   }
-  //return stud_level;
-}
-function check_ck(){
-  for(let i=0;i<2;i++){
-    if(document.getElementById("txt").value==(JSON.parse(localStorage.getItem(localStorage.key(i))).id)){
-      if((JSON.parse(localStorage.getItem(localStorage.key(i))).level)<3){
-        //document.getElementById("dep").remove();
-        window.alert('you cannot choose department');
-      }
+
+
+  localStorage.setItem('students',JSON.stringify(data))
+})
+
+
+
+let submitBtn = document.querySelector('#submit-btn')
+
+submitBtn.addEventListener('click', ()=>{
+
+
+  for(let i = 0 ; i < data.length;i++){
+    // console.log(data[i].id)
+   
+    if(data[i].id === enteredID.value){
+      // console.log(enteredID)
+
+      data[i].dept = chosenDept.value
     }
   }
-}
 
 
-//document.getElementById("mybutton").onclick = function(){
-  //  myname = document.getElementById("txt").value;
-    //if(myname==(localStorage.getItem(user1)).name){
-      //console.log("gggg");
-    //}
-//}
-//console.log(myname);
-//if(myname==JSON.parse(localStorage.getItem(user1)).name){
-  //  console.log('valid');
-//}
-//for(let i = 0; i < 2; i++){
-  //  if(input==JSON.parse(localStorage.getItem(key(i))).name){
-    //    document.write("valid");
-    //}
-//}
-//var dmmm='ahmed';
-//if((JSON.parse(localStorage.getItem('user1')).name)==myname){
-  //console.log("gggg");
-//}
-//console.log(JSON.parse(localStorage.getItem('user1')).name);
+  localStorage.setItem('students',JSON.stringify(data))
+
+
+})
