@@ -4,29 +4,37 @@
      <meta charset="UTF-8"/>
    </head>
    <body>
-    <header class="main-header">
-            <!-- main header contains logo and nav-->
-            <h1 id="logo">Students Affiars System</h2>
-            <!-- A nav containing links to other pages -->
-            <nav class="navigations">
-                <ul class="main-links">
-                    <li><a href="#">Home</a></li>                           <!-- Home page including: navBar, welcoming section, search for student by name section -->
-                    <li>
-                        <a >Students Information ▼</a>
-                        <!-- Drop Down list for student information -->
-                        <ul class="student-information-links">              
-                            <li><a href="add.html"> Add new student</li>               <!-- Add a new student to the system (Adham mahmoud) -->       
-                            <li><a href="edit.html"> Edit an existing student</li>  <!-- Edit information of an existing student in system: udpate and delete (Mazen)--> 
-                            <li><a href="table.html"> All students</li>              <!-- List all students with applity to activete and deactivate students (Abdel rahman)--> 
-                            <li><a href="department.html">department assignment page</a></li>
-                            </ul> 
-                    </li>
-                   
-                    
-                    <li><a href="login.html" id="login-link">Login</a></li>          <!-- link to login page (Mohammed hesham)-->
-                </ul>
-            </nav>
-        </header>
+    <nav>
+        <div class="container">
+          <a href="./Home.html" class="logo-container">
+            <img src="assets/cu-logo.png" alt="" class="logo">
+          </a>
+          
+      
+          <div class="nav-list-container">
+            <ul class="nav-list">
+              <li><a href="./Home.html">Home</a></li>
+              <li class="dropdown-list">
+                <a href="#">Students info</a>
+                
+                <ul class="dropdown-container">
+                  <li><a href="./add.html">Add new student</a></li>
+                  <li><a href="./department.html">Department assignment page</a></li>
+                  <li><a href="./table.html">All students</a></li>
+                </ul> 
+          
+              </li>
+              <li><a href="#">About</a></li>
+            </ul>
+            <button class="login-button"><a href="./login.html">Login</a></button>
+          </div>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </nav>
      <h1>Department assignment page</h1>
      <form>
         <div>

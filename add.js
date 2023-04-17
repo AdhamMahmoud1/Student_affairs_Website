@@ -46,4 +46,7 @@ document.getElementById("stud").addEventListener("submit", function (event) {
   data.push(student);
 
   localStorage.setItem("students", JSON.stringify(data));
+
+  const url = 'table.html';
+    window.location.href = url;
 });
