@@ -69,7 +69,7 @@ form.addEventListener("submit",(e)=>{
 
   if(idInput === adminData.id && passwordInput === adminData.password){
     alert("Logged in successful")
-    const url = 'table.html';
+    const url = 'home.html';
     window.location.href = url;
   }else{
     alert("invalid data")
