@@ -1,4 +1,4 @@
-@import url('../styles/custom.css');
+@import url('./custom.css');
 
 nav{
   border-bottom: 3px solid var(--green);
