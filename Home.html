@@ -4,59 +4,85 @@
         <meta charset="UTF-8">
         <meta name="description" content="Home page of students affairs system">
         <title>Home</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="../styling/home.css">
+        <script src="https://kit.fontawesome.com/5f0efd57ab.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <header class="main-header">
-            <!-- main header contains logo and nav-->
-            <h1 id="logo">Students Affiars System</h2>
-            <!-- A nav containning links to other pages-->
-            <nav class="navigations">
-                <ul class="main-links">
-                    <li><a href="Home.html">Home</a></li>                           <!-- Home page including: navBar, welcoming section, search for student by name section -->
-                    <li>
-                        <a >Students Information ▼</a>
-                        <!-- Drop Down list for student information -->
-                        <ul class="student-information-links">              
-                            <li><a href="add.html"> Add new student</li>               <!-- Add a new student to the system (Adham mahmoud) -->       
-                            <li><a href="edit.html"> Edit an existing student</li>  <!-- Edit information of an existing student in system: udpate and delete (Mazen)--> 
-                            <li><a href="table.html"> All students</li>              <!-- List all students with applity to activete and deactivate students (Abdel rahman)--> 
-                            <li><a href="department.html">department assignment page</a></li>
-                            </ul> 
-                    </li>
-                    <li><a href="#">About Us</a></li>
+
+        <!-- Main Header -->
+        <header>
+            <nav>
+                <div class="container">
+                    <a href="./Home.html" class="logo-container">
+                    <img src="../assests/cu-logo.png" alt="cairo-university-logo" class="logo">
+                    </a>
+                    <div class="nav-list-container">
+                    <ul class="nav-list">
+                        <li><a href="">Home</a></li>
+                        <li class="dropdown-list">
+                        <a href="#">Students info</a>
+                        
+                        <ul class="dropdown-container">
+                            <li><a href="">Add new student</a></li>
+                            <li><a href="">Edit an existing student</a></li>
+                            <li><a href="">All students</a></li>
+                        </ul> 
                     
-                    <li><a href="login.html" id="login-link">Login</a></li>          <!-- link to login page (Mohammed hesham)-->
-                </ul>
-            </nav>
-        </header>
+                        </li>
+                        <li><a href="">About</a></li>
+                    </ul>
+                    <button class="login-button">Login</button>
+                    </div>
+                    <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    </div>
+                </div>
+            </nav>  
+        </header>          
+
+
+
         <!-- main section-->
-        <section class="central-section">
+        <section class="main">
             <div class="welcoming">
-                <h2> Welcome to students affairs website</h3>
-                <p> small brief</p>
+                <h1>Students Affairs Website</h1><br>
+                <p>The College of Computer Science and Artificial Intelligence strives to be a leading educational and research institution in the field of computing and community development in light of international quality standards.</p>
+                <a href="#search-section" class="main-button">Manage Students</a> 
             </div>
+
             <!-- Register -->
             <div class="register">
                 <p> Don't have an account?</p>
                 <div class="registeration-button">
-                    <a href="#"> Sign up</a>       <!-- link to sign up page () -->
+                    <a href="#"> Sign up</a>     
                 </div>
             </div>
         </section>
+
+
+
         <!-- search for student by name seaction -->
-        <section class="searching-section">
+        <section id="search-section">
+            <h2 class="title">search a student by name</h2>
+            
             <div class="searching-box">
-                <p>Search for a student by name</p>
-                <form>
-                    <input type="text" name="" placeholder="Student name...">
-                    <input type="submit" name="value" value="Search">
+                <form class>
+                    <input type="text" name="" placeholder="which student are you looking for?"> 
+                    <button type="submit"><i class="fas fa-search"></i></button>
                 </form>
             </div>
         </section>
 
+
+        <!-- Footer -->
         <footer>
             <h4 id="rights">Copyright © 2023 Faculty of Computers and Artificial Intelligence</p>
         </footer>
+
+
+        <!-- script files -->
+        <script src="../script/navbar.js"></script>
     </body>
 </html>
