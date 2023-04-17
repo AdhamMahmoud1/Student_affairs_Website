@@ -1,72 +1,26 @@
 /* navbar styling */
-
+@import url(./navbar.css);
 
 :root{
 
-    --navBar-bg-color: #a73103;
-    --navBar-txt-color: #fff; 
-    --navBar-dropDown-color: #7a3005; 
+
 
     --searchFiled-txt-color: #360d0d;
-    --searchFiled-border-color: #b68c86;
+    --searchFiled-border-color: #cfefd4;
     --searchFiled-placeholder-color: gray;
 
     --table-txt-color: #fff; 
     --table-firstRow-color: #e3e3e3;
-    --table-secondRow-color: #b8371721;
-    --table-header-color: #b83717;
+    --table-secondRow-color: #87efc021;
+    --table-header-color: #a1e796;
 
     --stateSwitch-active-color: rgb(5, 161, 75);
     --stateSwitch-inactive-color: rgb(255, 10, 10);
 }
 
-*{
-    padding: 0;
-    margin: 0;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
-    justify-content: center;
-    align-items: center;
-}
-/* header{
-    justify-content: space-between;
-} */
-/* --------------------------------------- */
-ul{
-    list-style: none;
-    background: var(--navBar-bg-color);
-}
-ul li{
-    display: inline-block;
-    position: relative;
-}
-ul li a{
-    display: block;
-    padding: 20px 25px;
-    color: var(--navBar-txt-color);
-    text-decoration: none;
-    text-align: center;
-    font-size: 20px;
-}
-ul li ul.dropdown li{
-    display: block;
-}
-ul li ul.dropdown{
-    width: 100%;
-    background: var(--navBar-bg-color);
-    position: absolute;
-    z-index: 999;
-    display: none;
-}
-ul li:hover{
-    background: var(--navBar-dropDown-color);
-}
-
-ul li:hover ul.dropdown{
-    display: block;
-}
 /* ------------------------------------------- */
-.container{
+.content{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -132,7 +86,7 @@ table{
 
 table thead th{
     text-align: center;
-    background-color: var(--table-header-color);
+    background-color: var(--green);
     color: var(--table-txt-color);
     padding: 10px 30px 5px 8px;
     margin: auto;
@@ -222,12 +176,12 @@ input[type=checkbox].toggle:checked + label:before{
 
 
 tr:hover{
-  background-color: #b83717;
+  background-color: #6ee59e;
   cursor: pointer;
 }
 
 tr.selected{
-  background-color: #b83717;
+  background-color: #6ee59e;
 }
 
 .edit-btn{
