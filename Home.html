@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="description" content="Home page of students affairs system">
         <title>Home</title>
-        <link rel="stylesheet" href="../styling/home.css">
+        <link rel="stylesheet" href="./styles/home.css">
         <script src="https://kit.fontawesome.com/5f0efd57ab.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -14,7 +14,7 @@
             <nav>
                 <div class="container">
                     <a href="./Home.html" class="logo-container">
-                    <img src="../assests/cu-logo.png" alt="cairo-university-logo" class="logo">
+                    <img src="./assets/cu-logo.png" alt="cairo-university-logo" class="logo">
                     </a>
                     <div class="nav-list-container">
                     <ul class="nav-list">
@@ -23,15 +23,15 @@
                         <a href="#">Students info</a>
                         
                         <ul class="dropdown-container">
-                            <li><a href="">Add new student</a></li>
-                            <li><a href="">Edit an existing student</a></li>
-                            <li><a href="">All students</a></li>
+                            <li><a href="./add.html">Add new student</a></li>
+                            <li><a href="./edit.html">Edit an existing student</a></li>
+                            <li><a href="./table.html">All students</a></li>
                         </ul> 
                     
                         </li>
                         <li><a href="">About</a></li>
                     </ul>
-                    <button class="login-button">Login</button>
+                    <button class="login-button" onclick="window.location.href='login.html'">Login</button>
                     </div>
                     <div class="hamburger">
                     <span class="bar"></span>
@@ -83,6 +83,7 @@
 
 
         <!-- script files -->
-        <script src="../script/navbar.js"></script>
+        <script src="navbar.js"></script>
+        <script src="Home.js"></script>
     </body>
 </html>
