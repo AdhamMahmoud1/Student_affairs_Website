@@ -47,29 +47,71 @@ let students = [
  status.value=JSON.parse(localStorage.getItem('students'))[1].status
  mobile.value=JSON.parse(localStorage.getItem('students'))[1].mobile
 
+ class Edit {
+  constructor() {
+    super();
+    this.state ={
+      fname : "",
+      lname : "",
+      id : "",
+      gpa :"",
+      email : "",
+      date : "",
+      gender : "",
+      dept : '',
+      status : "",
+      mobile : "",
+      redirectToTable : false,
+      loading :false
+    };
+
+  }
+  
+ }
 
 function save(){
-    var studs =students[1];
-    document.getElementById('fname').value=studs.fname;
-   document.getElementById('lname').value=studs.lname
-    document.getElementById('ID').value=studs=id
-    document.getElementById('GPA').value=studs.gpa
-    document.getElementById('Status').value=studs.status
-  document.getElementById('email').value=studs.email
-    document.getElementById('date').value=studs.date
-    document.getElementById('Gender').value=studs.gender
-    document.getElementById('mobile').value=studs.mobile
+    
+    localStorage.setItem('students',JSON.stringify(students))
+    const fname =document.getElementById("fname")
+    const lname =document.getElementById("lname")
+    const id =document.getElementById("ID")
+    const gpa =document.getElementById("GPA")
+    const status =document.getElementById("Status")
+    const email =document.getElementById("email")
+    const date =document.getElementById("date")
+    const gender =document.getElementById("Gender")
+    const mobile =document.getElementById("mobile")
    
+    localStorage.removeItem('fname');
+    localStorage.removeItem('lname');
+    localStorage.removeItem('id');
+    localStorage.removeItem('gpa');
+    localStorage.removeItem('status');
+    localStorage.removeItem('gender');
+    localStorage.removeItem('date');
+    localStorage.removeItem('mobile');
+    localStorage.removeItem('email');
+   
+        localStorage.setItem('fname', fname.value);
+        localStorage.setItem('lname', lname.value);
+        localStorage.setItem('id', id.value);
+        localStorage.setItem('gpa', gpa.value);
+        localStorage.setItem('status', status.value);
+        localStorage.setItem('gender', gender.value);
+        localStorage.setItem('date', date.value);
+        localStorage.setItem('mobile', mobile.value);
+        localStorage.setItem('email', email.value);
 
-        localStorage.setItem('fname', fname);
-        localStorage.setItem('lname', lname);
-        localStorage.setItem('id', id);
-        localStorage.setItem('gpa', gpa);
-        localStorage.setItem('status', status);
-        localStorage.setItem('gender', gender);
-        localStorage.setItem('date', date);
-        localStorage.setItem('mobile', mobile);
-        localStorage.setItem('email', email);
+        localStorage.getItem('students')[1].fname
+        localStorage.getItem('students')[1].lname
+        localStorage.getItem('students')[1].id
+        localStorage.getItem('students')[1].gpa
+        localStorage.getItem('students')[1].email
+        localStorage.getItem('students')[1].date
+        localStorage.getItem('students')[1].gender
+        localStorage.getItem('students')[1].dept
+        localStorage.getItem('students')[1].status
+        localStorage.getItem('students')[1].mobile
         
    
 
