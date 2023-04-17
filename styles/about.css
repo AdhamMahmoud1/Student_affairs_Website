@@ -1,0 +1,16 @@
+@import url(../styles/navbar.css);
+
+
+
+footer
+{
+    background-color: var(--green);
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 1.15rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align:center;
+    margin:0 auto;
+}
