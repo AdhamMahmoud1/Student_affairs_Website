@@ -4,46 +4,46 @@
         <meta charset="UTF-8" />
         <title>Add New Students</title>
         <meta name="description" content="adding new students to the system" />
-        <link rel="stylesheet" href="../styles/add.css">
+        <link rel="stylesheet" href="./styles/navbar.css">
+        <link rel="stylesheet" href="./styles/add.css">
     </head>
     <body>
+
+      <nav>
+        <div class="container">
+          <a href="./Home.html" class="logo-container">
+            <img src="assets/cu-logo.png" alt="" class="logo">
+          </a>
+          
+      
+          <div class="nav-list-container">
+            <ul class="nav-list">
+              <li><a href="./Home.html">Home</a></li>
+              <li class="dropdown-list">
+                <a href="#">Students info</a>
+                
+                <ul class="dropdown-container">
+                  <li><a href="./add.html">Add new student</a></li>
+                  <li><a href="./department.html">Department assignment page</a></li>
+                  <li><a href="./table.html">All students</a></li>
+                </ul> 
+          
+              </li>
+              <li><a href="#">About</a></li>
+            </ul>
+            <button class="login-button"><a href="./login.html">Login</a></button>
+          </div>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </nav>
+
+
+
         <form action="" id="stud" method="get" target="_blank">
-            <header>
-                <nav>
-                    <div class="container">
-                        <a href="./Home.html" class="logo-container">
-                            <img src="../assets/cu-logo.png" alt="" class="logo">
-                        </a>
-                
-                
-                        <div class="nav-list-container">
-                            <ul class="nav-list">
-                                <li><a href="">Home</a></li>
-                                <li class="dropdown-list">
-                                    <a href="#">Students info</a>
-                
-                                    <ul class="dropdown-container">
-                                        <li><a href="">Add new student</a></li>
-                                        <li><a href="">Edit an existing student</a></li>
-                                        <li><a href="">All students</a></li>
-                                    </ul>
-                
-                                </li>
-                                <li><a href="">About</a></li>
-                            </ul>
-                            <button class="login-button">Login</button>
-                        </div>
-                        <div class="hamburger">
-                            <span class="bar"></span>
-                            <span class="bar"></span>
-                            <span class="bar"></span>
-                        </div>
-                    </div>
-                
-                
-                </nav>
-                <h1>Add Students</h1>
-            </header>
             <div>
                 <p><h3>Please fill the following fields:</h3></p>
             </div>
@@ -75,10 +75,10 @@
             <section>
                 <label for="level">Level: </label>
                 <select name="Level" id="level">
-                    <option value="1">Level 1</option>
-                    <option value="2">Level 2</option>
-                    <option value="3">Level 3</option>
-                    <option value="4">Level 4</option>
+                    <option value="level 1">Level 1</option>
+                    <option value="level 2">Level 2</option>
+                    <option value="level 3">Level 3</option>
+                    <option value="level 4">Level 4</option>
                 </select>
             </section>
             <br>
@@ -86,39 +86,41 @@
                 <label for="dep">Department: </label>
                 <select name="department" id="dep">
                     <optgroup>
-                        <option value="1">CS</option>
-                        <option value="1">IS</option>
-                        <option value="1">IT</option>
-                        <option value="1">Cyper Secutrity</option>
-                        <option value="1">Software Engineering</option>
+                        <option value="CS">Computer Since (CS)</option>
+                        <option value="IS>Information Systems (IS)</option>
+                        <option value="IT">IT</option>
+                        <option value="Secutrity">Cyper Secutrity</option>
+                        <option value="SE">Software Engineering</option>
+                        <option value="General">General</option>
                     </optgroup>
                 </select>
             </section>
-            <br>
+            
+            <section>
+                <label for="gpa" >GPA: </label>
+                <input type="text" id="gpa" min="0" max="4">
+            </section>
             <section>
                 <label>Status: </label>
-                <input type="radio" name="active">
-                <label for="active">Active</label>
-                <input type="radio" name="inactive">
-                <label for="inactive">Inactive</label>
+                <select type="radio" name="status" id="active">
+                    <optgroup>
+                        <option value="Active">Active</option>
+                        <option value="Inactive">Inactive</option>
+                    </optgroup>
             </section>
             <br>
-            <section>
-                <label for="gba">GBA: </label>
-                <input type="" id="gba" min="0" max="4">
-            </section>
-            <br>
+        
             <section>
                 <label for="Bdate">Birth Date:</label >
                 <input type="date" id="bdate">
             </section>
             <br>
             <section>
-                <label for="gender">Gender: </label>
-                <input type="radio" id="gender" name="male" value="male">
-                <label for="gender">Male</label>
-                <input type="radio" id="gender" name="female" value="feale">
-                <label for="gender">Female</label>
+                <select type="radio" name="gender" id="gender">
+                    <optgroup>
+                        <option value="Male" name="Male">Male</option>
+                        <option value="Female" name="Female">Female</option>
+                    </optgroup>
             </section>
             <br>
             <section>
@@ -128,7 +130,7 @@
             <br>
             <footer>about us</footer>
         </form>
-        <script src="../js/navbar.js"></script>
-        <script src="../js/add.js"></script>
+        <script src="./navbar.js"></script>
+        <script src="./add.js"></script>
     </body>
 </html>

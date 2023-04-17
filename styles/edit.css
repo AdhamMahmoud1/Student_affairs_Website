@@ -239,3 +239,7 @@ fieldset:last-child{
   }
 }
 
+.success{
+  background-color: green;
+  padding: 10px 30;
+}

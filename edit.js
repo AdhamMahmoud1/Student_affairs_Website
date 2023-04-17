@@ -125,6 +125,10 @@ form.addEventListener("submit", (e) => {
     savedMsg.textContent = "Saved successfully"
     savedMsg.classList.add("success")
     form.appendChild(savedMsg)
+
+
+    const url = `table.html`;
+    window.location.href = url;
   }
 })
 
