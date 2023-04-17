@@ -4,48 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <title>CSS</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="styles/TableStyle.css">
 
 </head>
 
 
 <body>
-    <nav>
-        <div class="container">
-          <a href="./Home.html" class="logo-container">
-            <img src="assets/cu-logo.png" alt="" class="logo">
-          </a>
-          
-      
-          <div class="nav-list-container">
-            <ul class="nav-list">
-              <li><a href="">Home</a></li>
-              <li class="dropdown-list">
-                <a href="">Students info</a>
-                
-                <ul class="dropdown-container">
-                  <li><a href="">Add new student</a></li>
-                  <li><a href="">Edit an existing student</a></li>
-                  <li><a href="">All students</a></li>
-                </ul> 
-          
-              </li>
-              <li><a href="">About</a></li>
-            </ul>
-           
-          </div>
-          <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
-        </div>
-    
-    
-      </nav>
-    
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li>
+                <a href="#">Student information</a>
+                <ul class="dropdown">
+                    <li><a href="#">Add student</a></li>
+                    <li><a href="#">Edit Student</a></li>
+                    <li><a href="#">All students</a></li>
+                </ul>
+            </li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
 
-    <div class="content">
+    <div class="container">
         <div class="search-Container">
                 <!-- <label class="Search-icon" for="myInput"><i class='bx bx-search'></i></label>  -->
                 <input type="text" id="myInput" onkeyup="tableSearch()" placeholder="Search For Student">
@@ -65,260 +45,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <!-- td: table data -->
-                    
-                    <td>20210001</td>
-                    <td>Mazen Mahmoud</td>
-                    <td>3.96</td>
-                    <td>Second Level</td>
-                    <td>
-                        <input type="checkbox" class="toggle" id="001">
-                        <label for="001" data-checked="active" data-unchecked="inactive"></label>
-                    </td>
-                </tr>
-                <tr>
-                    <!-- td: table data -->
-                    <td>20210002</td>
-                    <td>Adham Mahmoud</td>
-                    <td>3.95</td>
-                    <td>Second Level</td>
-                    <td>
-                        <input type="checkbox" class="toggle" id="002">
-                        <label for="002" data-checked="active" data-unchecked="inactive"></label>
-                    </td>
-                </tr>
-                <tr>
-                    <!-- td: table data -->
-                    <td>20210003</td>
-                    <td>Fady Kamal</td>
-                    <td>3.94</td>
-                    <td>Second Level</td>
-                    <td>
-                        <input type="checkbox" class="toggle" id="003">
-                        <label for="003" data-checked="active" data-unchecked="inactive"></label>
-                    </td>
-                </tr>
-                <tr>
-                    <!-- td: table data -->
-                    <td>20210004</td>
-                    <td>Mohamed Hesham</td>
-                    <td>3.93</td>
-                    <td>Second Level</td>
-                    <td>
-                        <input type="checkbox" class="toggle" id="004">
-                        <label for="004" data-checked="active" data-unchecked="inactive"></label>
-                    </td>
-                </tr>
-                <tr>
-                    <!-- td: table data -->
-                    <td>20210005</td>
-                    <td>Abdelrhman Amer</td>
-                    <td>3.92</td>
-                    <td>Second Level</td>
-                    <td>
-                        <input type="checkbox" class="toggle" id="005">
-                        <label for="005" data-checked="active" data-unchecked="inactive"></label>
-                    </td>
-                </tr>
-                <tr>
-                    <!-- td: table data -->
-                    <td>20210006</td>
-                    <td>Goerge Ayman</td>
-                    <td>3.91</td>
-                    <td>Second Level</td>
-                    <td>
-                        <input type="checkbox" class="toggle" id="006">
-                        <label for="006" data-checked="active" data-unchecked="inactive"></label>
-                    </td>
-                </tr>
-                <tr>
-                    <!-- td: table data -->
-                    <td>20210007</td>
-                    <td>Omar Ali</td>
-                    <td>3.29</td>
-                    <td>First Level</td>
-                    <td>
-                        <input type="checkbox" class="toggle" id="007">
-                        <label for="007" data-checked="active" data-unchecked="inactive"></label>
-                    </td>
-                </tr>
-                <tr>
-                    <!-- td: table data -->
-                    <td>20210008</td>
-                    <td>Samy Taha</td>
-                    <td>2.50</td>
-                    <td>First Level</td>
-                    <td>
-                        <input type="checkbox" class="toggle" id="008">
-                        <label for="008" data-checked="active" data-unchecked="inactive"></label>
-                    </td>
-                </tr>
-                <tr>
-                    <!-- td: table data -->
-                    <td>20210009</td>
-                    <td>Ahmed Mohamed</td>
-                    <td>3.11</td>
-                    <td>Third Level</td>
-                    <td>
-                        <input type="checkbox" class="toggle" id="009">
-                        <label for="009" data-checked="active" data-unchecked="inactive"></label>
-                    </td>
-                </tr>
-                <tr>
-                    <!-- td: table data -->
-                    <td>20210010</td>
-                    <td>Abdallah Ali</td>
-                    <td>3.83</td>
-                    <td>Fourth Level</td>
-                    <td>
-                        <input type="checkbox" class="toggle" id="010">
-                        <label for="010" data-checked="active" data-unchecked="inactive"></label>
-                    </td>
-                </tr>
-                <tr>
-                    <!-- td: table data -->
-                    <td>20210011</td>
-                    <td>Mohamed Ayman</td>
-                    <td>3.91</td>
-                    <td>Second Level</td>
-                    <td>
-                        <input type="checkbox" class="toggle" id="011">
-                        <label for="011" data-checked="active" data-unchecked="inactive"></label>
-                    </td>
-                </tr>
-                <tr>
-                    <!-- td: table data -->
-                    <td>20210012</td>
-                    <td>Mosa Farag</td>
-                    <td>2.31</td>
-                    <td>Fourth Level</td>
-                    <td>
-                        <input type="checkbox" class="toggle" id="012">
-                        <label for="012" data-checked="active" data-unchecked="inactive"></label>
-                    </td>
-                </tr>
-                <tr>
-                    <!-- td: table data -->
-                    <td>20210013</td>
-                    <td>Ali Rezk</td>
-                    <td>3.10</td>
-                    <td>First Level</td>
-                    <td>
-                        <input type="checkbox" class="toggle" id="013">
-                        <label for="013" data-checked="active" data-unchecked="inactive"></label>
-                    </td>
-                </tr>
-                <tr>
-                    <!-- td: table data -->
-                    <td>20210014</td>
-                    <td>Ahmed Ali</td>
-                    <td>1.98</td>
-                    <td>First Level</td>
-                    <td>
-                        <input type="checkbox" class="toggle" id="014">
-                        <label for="014" data-checked="active" data-unchecked="inactive"></label>
-                    </td>
-                </tr>
-                <tr>
-                    <!-- td: table data -->
-                    <td>20210015</td>
-                    <td>Samir gamal</td>
-                    <td>3.31</td>
-                    <td>Third Level</td>
-                    <td>
-                        <input type="checkbox" class="toggle" id="015">
-                        <label for="015" data-checked="active" data-unchecked="inactive"></label>
-                    </td>
-                </tr>
-                <tr>
-                    <!-- td: table data -->
-                    <td>20210016</td>
-                    <td>Nagah Hussin</td>
-                    <td>0.9</td>
-                    <td>First Level</td>
-                    <td>
-                        <input type="checkbox" class="toggle" id="016">
-                        <label for="016" data-checked="active" data-unchecked="inactive"></label>
-                    </td>
-                </tr>
-                <tr>
-                    <!-- td: table data -->
-                    <td>20210017</td>
-                    <td>Salah Ayman</td>
-                    <td>3.01</td>
-                    <td>Third Level</td>
-                    <td>
-                        <input type="checkbox" class="toggle" id="017">
-                        <label for="017" data-checked="active" data-unchecked="inactive"></label>
-                    </td>
-                </tr>
-                <tr>
-                    <!-- td: table data -->
-                    <td>20210018</td>
-                    <td>Marwan Ahmed</td>
-                    <td>2.89</td>
-                    <td>Fourth Level</td>
-                    <td>
-                        <input type="checkbox" class="toggle" id="018">
-                        <label for="018" data-checked="active" data-unchecked="inactive"></label>
-                    </td>
-                </tr>
-                <tr>
-                    <!-- td: table data -->
-                    <td>20210019</td>
-                    <td>Mostafa Adel</td>
-                    <td>3.98</td>
-                    <td>Second Level</td>
-                    <td>
-                        <input type="checkbox" class="toggle" id="019">
-                        <label for="019" data-checked="active" data-unchecked="inactive"></label>
-                    </td>
-                </tr>
-                <tr>
-                    <!-- td: table data -->
-                    <td>20210020</td>
-                    <td>Moas Ayman</td>
-                    <td>3.51</td>
-                    <td>Second Level</td>
-                    <td>
-                        <input type="checkbox" class="toggle" id="020">
-                        <label for="020" data-checked="active" data-unchecked="inactive"></label>
-                    </td>
-                </tr>
-                <tr>
-                    <!-- td: table data -->
-                    <td>20210021</td>
-                    <td>Omar Nabil</td>
-                    <td>3.17</td>
-                    <td>Second Level</td>
-                    <td>
-                        <input type="checkbox" class="toggle" id="021">
-                        <label for="021" data-checked="active" data-unchecked="inactive"></label>
-                    </td>
-                </tr>
-                <tr>
-                    <!-- td: table data -->
-                    <td>20210022</td>
-                    <td>Nasr Abdallah</td>
-                    <td>2.19</td>
-                    <td>Third Level</td>
-                    <td>
-                        <input type="checkbox" class="toggle" id="022">
-                        <label for="022" data-checked="active" data-unchecked="inactive"></label>
-                    </td>
-                </tr>
-                <tr>
-                    <!-- td: table data -->
-                    <td>20210023</td>
-                    <td>Ramadan Kareem</td>
-                    <td>4.00</td>
-                    <td>Fourth Level</td>
-                    <td>
-                        <input type="checkbox" class="toggle" id="023">
-                        <label for="023" data-checked="active" data-unchecked="inactive"></label>
-                    </td>
-                </tr>
+                
             </tbody>
         </table>
 
@@ -326,8 +53,8 @@
        
     </div>
 
+    <!-- <script src="script.js" type="application/javascript" ></script> -->
     <script src="TableScript.js"> </script>
-    <script src="navbar.js"></script>
 
 </body>
 
