@@ -20,6 +20,44 @@ function tableSearch() {
     }
 }
 
+
+
+let tableBody = document.querySelector("tbody")
+// Get Data from local Storage
+function getData(){
+  let studentsInfo = JSON.parse(localStorage.getItem('students'))
+  return studentsInfo;
+}
+
+function addDataToTablet(){
+
+  let data = getData();
+  console.log(data)
+  if(data){
+    let table = ``;
+    for(let i = 0 ; i < data.length; i++){
+      table += `
+        <tr>
+          <td>${data[i].id}</td>
+          <td>${data[i].fname} ${data[i].lname}</td>
+          <td>${data[i].gpa}</td>
+          <td>${data[i].level}</td>
+          <td>
+              <input type="checkbox" class="toggle" id=${i}>
+              <label for= ${i} data-checked="active" data-unchecked="inactive"></label>
+          </td>
+        </tr>
+      `
+    }
+    tableBody.innerHTML = table;
+
+  }
+}
+
+
+
+addDataToTablet()
+
 const rows = document.querySelectorAll('table tr');
 
 rows.forEach(function(row) {
@@ -35,6 +73,7 @@ rows.forEach(function(row) {
     console.log(id);
   });
 });
+
 
 /*
 const queryString = window.location.search;
