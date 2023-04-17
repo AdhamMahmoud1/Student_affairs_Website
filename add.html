@@ -4,39 +4,57 @@
         <meta charset="UTF-8" />
         <title>Add New Students</title>
         <meta name="description" content="adding new students to the system" />
+        <link rel="stylesheet" href="../styles/add.css">
     </head>
     <body>
-        <form action="" method="get" target="_blank">
+        <form action="" id="stud" method="get" target="_blank">
             <header>
-                <h1>Add Students</h1>
-                <nav class="navigations">
-                    <ul class="main-links">
-                        <li><a href="Home.html">Home</a></li>
-                        <!-- Home page including: navBar, welcoming section, search for student by name section -->
-                        <li>
-                            <a >Students Information ▼</a>
-                            <!-- Drop Down list for student information -->
-                            <ul class="student-information-links">
-                                <li><a href="add.html"> Add new student</li> <!-- Add a new student to the system (Adham mahmoud) -->
-                                <li><a href="edit.html"> Edit an existing student</li>
-                                <!-- Edit information of an existing student in system: udpate and delete (Mazen)-->
-                                <li><a href="table.html"> All students</li>
-                                <!-- List all students with applity to activete and deactivate students (Abdel rahman)-->
-                                <li><a href="department.html">department assignment page</a></li>
+                <nav>
+                    <div class="container">
+                        <a href="./Home.html" class="logo-container">
+                            <img src="../assets/cu-logo.png" alt="" class="logo">
+                        </a>
+                
+                
+                        <div class="nav-list-container">
+                            <ul class="nav-list">
+                                <li><a href="">Home</a></li>
+                                <li class="dropdown-list">
+                                    <a href="#">Students info</a>
+                
+                                    <ul class="dropdown-container">
+                                        <li><a href="">Add new student</a></li>
+                                        <li><a href="">Edit an existing student</a></li>
+                                        <li><a href="">All students</a></li>
+                                    </ul>
+                
+                                </li>
+                                <li><a href="">About</a></li>
                             </ul>
-                        </li>
-                        <li><a href="#">About Us</a></li>
-                        
-                        <li><a href="login.html" id="login-link">Login</a></li> <!-- link to login page (Mohammed hesham)-->
-                    </ul>
+                            <button class="login-button">Login</button>
+                        </div>
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </div>
+                
+                
                 </nav>
+                <h1>Add Students</h1>
             </header>
             <div>
                 <p><h3>Please fill the following fields:</h3></p>
             </div>
             <section>
-                <label for="name">Student Name: </label>
-                <input type="text" name="name" id="name" placeholder="Enter Student name">
+                <label for="name">First Name: </label>
+                <input type="text" name="name" id="fname" placeholder="Enter Student name">
+            </section>
+
+            <section>
+                <label for="name">Last Name: </label>
+                <input type="text" name="name" id="lname" placeholder="Enter Student name">
             </section>
             <br>
             <section>
@@ -92,7 +110,7 @@
             <br>
             <section>
                 <label for="Bdate">Birth Date:</label >
-                <input type="date" id="Ddate">
+                <input type="date" id="bdate">
             </section>
             <br>
             <section>
@@ -104,11 +122,13 @@
             </section>
             <br>
             <section>
-                <input type="submit" name="submit">
+                <input type="submit" id="submit" name="submit">
                 <input type="reset" name="reset">
             </section>
             <br>
             <footer>about us</footer>
         </form>
+        <script src="../js/navbar.js"></script>
+        <script src="../js/add.js"></script>
     </body>
 </html>
