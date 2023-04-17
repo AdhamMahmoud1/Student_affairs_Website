@@ -56,22 +56,22 @@
                 <label for="name">Last Name: </label>
                 <input type="text" name="name" id="lname" placeholder="Enter Student name">
             </section>
-            <br>
+
             <section>
                 <label for="id">Student ID: </label>
                 <input type="number" id="id" placeholder="20210000" min="20200000">
             </section>
-            <br>
+
             <section>
                 <label for="mail">E-mail: </label>
                 <input type="email" id="mail" placeholder="student@mail.com">
             </section>
-            <br>
+
             <section>
                 <label for="phone">Phone:</label>
                 <input type="tel" id="phone" placeholder="+20 ">
             </section>
-            <br>
+
             <section>
                 <label for="level">Level: </label>
                 <select name="Level" id="level">
@@ -81,17 +81,17 @@
                     <option value="level 4">Level 4</option>
                 </select>
             </section>
-            <br>
+
             <section>
                 <label for="dep">Department: </label>
                 <select name="department" id="dep">
                     <optgroup>
-                        <option value="CS">Computer Since (CS)</option>
-                        <option value="IS>Information Systems (IS)</option>
-                        <option value="IT">IT</option>
-                        <option value="Secutrity">Cyper Secutrity</option>
-                        <option value="SE">Software Engineering</option>
-                        <option value="General">General</option>
+                        <option value="CS">Computer Science (CS)</option>
+                        <option value="IS">Information Systems (IS)</option>
+                        <option value="IT">Information Technology (IT)</option>
+                        <option value="AI">Artificial Intelligence (AI)</option>
+                        <option value="DS">Decision Support (DS)</option>
+                      
                     </optgroup>
                 </select>
             </section>
@@ -107,27 +107,30 @@
                         <option value="Active">Active</option>
                         <option value="Inactive">Inactive</option>
                     </optgroup>
+                </select>
             </section>
-            <br>
+
         
+            <div>
+                <label for="bdate">Birth Date: </label>
+                <input type="date" id="bdate" name="bdate">
+               
+            </div>
+
             <section>
-                <label for="Bdate">Birth Date:</label >
-                <input type="date" id="bdate">
-            </section>
-            <br>
-            <section>
+                <label for="gender">Gender:</label >
                 <select type="radio" name="gender" id="gender">
                     <optgroup>
                         <option value="Male" name="Male">Male</option>
                         <option value="Female" name="Female">Female</option>
                     </optgroup>
             </section>
-            <br>
+
             <section>
                 <input type="submit" id="submit" name="submit">
                 <input type="reset" name="reset">
             </section>
-            <br>
+
             <footer>about us</footer>
         </form>
         <script src="./navbar.js"></script>

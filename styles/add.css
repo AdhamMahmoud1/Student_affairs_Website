@@ -126,20 +126,7 @@ input[type="radio"] {
 }
 
 /* create custom radio button appearance */
-input[type="radio"]+label:before {
-    content: "";
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    margin-right: 8px;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-}
 
-/* add style for checked radio button */
-input[type="radio"]:checked+label:before {
-    background-color: var(--green);
-}
 
 /* style label elements */
 label {

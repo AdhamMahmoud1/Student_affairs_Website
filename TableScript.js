@@ -43,8 +43,7 @@ function addDataToTablet(){
           <td>${data[i].gpa}</td>
           <td>${data[i].level}</td>
           <td>
-              <input type="checkbox" class="toggle" id=${i}>
-              <label for= ${i} data-checked="active" data-unchecked="inactive"></label>
+           ${data[i].status}
           </td>
         </tr>
       `
