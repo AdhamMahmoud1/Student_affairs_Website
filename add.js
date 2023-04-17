@@ -20,7 +20,7 @@ document.getElementById("stud").addEventListener("submit", function (event) {
         phone: phone,
         gender: gender,
         level: level,
-        department: department,
+        dept: department,
         birth: birth
     };
     let data = JSON.parse(localStorage.getItem("students"));
