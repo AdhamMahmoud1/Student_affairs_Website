@@ -15,7 +15,7 @@ nav{
 }
 
 .logo{
-  width: 40px;
+  width: 70px;
 }
 
 .nav-list-container{
@@ -49,10 +49,13 @@ nav{
   border: var(--green) 1px solid;
 }
 
-.logo-container{
+.logo-container
+{
+  padding-top: 10px;
+  padding-bottom: 5px;
   display: flex;
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .login-button{
@@ -201,6 +204,3 @@ nav{
     gap: 0.5rem;
   }
 }
-
-
-
