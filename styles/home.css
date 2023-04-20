@@ -1,4 +1,5 @@
-@import url(../styles/navbar.css);
+@import url("./navbar.css");
+@import url("./footer.css");
 
 
 section
@@ -163,20 +164,8 @@ form .fa-search
 
 }
 
-footer
-{
-    background-color: var(--green);
-    color: var(--white);
-    border-radius: 4px;
-    font-size: 1.15rem;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align:center;
-    margin:0 auto;
-}
 
-
+/* Media queries for a responsive page */
 
 @media (min-width: 850px) and (max-width: 1100px)
 {
@@ -185,12 +174,6 @@ footer
         padding: 0px 0px;
         
     }
-
-    footer
-    {
-        font-size: 0.9em;
-    }
-
 }
 
 
@@ -204,11 +187,6 @@ footer
     .welcoming
     {
         padding: 0px 30px;
-    }
-
-    footer
-    {
-        font-size: 1em;
     }
 }
 
@@ -250,10 +228,4 @@ footer
         padding: 11px 0px;
         font-size: 1em;
     }
-
-    footer
-    {
-        font-size: 0.6em;
-    }
 }
-

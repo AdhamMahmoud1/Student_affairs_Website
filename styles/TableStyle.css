@@ -1,5 +1,6 @@
-/* navbar styling */
-@import url(../styles/navbar.css);
+/* navbar and footer styling */
+@import url("./navbar.css");
+@import url("./footer.css");
 
 :root{
 

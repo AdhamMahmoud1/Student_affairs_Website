@@ -1,4 +1,5 @@
-@import url(../styles/navbar.css);
+@import url("./navbar.css");
+@import url("./footer.css");
 
 
 button{
