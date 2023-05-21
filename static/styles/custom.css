@@ -1,0 +1,41 @@
+/*Importing works sans font*/
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700&display=swap');
+
+:root{
+  --black : #292929;
+  --green : #1FAB71;
+  --white : #fff;
+  --light-green : #51ecab;
+  --light-grey : rgba(32, 32, 32, 0.3);
+  --green-white :#c3e7d8;
+}
+
+*,
+*::before,
+*::after
+{
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  color: var(--black);
+}
+
+li{
+  list-style: none;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Work Sans', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+button{
+  cursor: pointer;
+}

@@ -1,0 +1,63 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block style %}
+<head>
+  <link rel="stylesheet" href={% static "styles/TableStyle.css" %}>
+</head>
+{% endblock style %}
+
+
+
+
+{% block content %}
+    
+
+    <div class="content">
+        <div class="search-Container">
+                <!-- <label class="Search-icon" for="myInput"><i class='bx bx-search'></i></label>  -->
+                <input type="text" id="myInput" onkeyup="tableSearch()" placeholder="Search For Student">
+
+        </div>
+        <table id="myTable" width="100%">
+            <!-- <caption>Students Information</caption> -->
+            <thead>
+                <tr>
+                    <!-- th: table header -->
+            
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>GPA</th>
+                    <th>Level</th>
+                    <th>State</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+              {% for student in students %}
+              
+                <tr>
+                  
+                  <td>{{student.id}}</td>
+                  <td>{{student.firstName}} {{student.lastName}}</td>
+                  <td>{{student.GPA}}</td>
+                  <td>{{student.level}}</td>
+                  <td>
+                  {{student.status}}
+                  </td>
+                </tr>
+              {% endfor %}
+
+            </tbody>
+        </table>
+
+
+      
+    </div>
+
+
+    <script src= {% static "scripts/all_students.js" %} ></script>
+    
+{% endblock content %}

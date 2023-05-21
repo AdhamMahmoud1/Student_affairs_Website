@@ -1,0 +1,147 @@
+{% extends 'main.html' %}
+
+
+{% load static %}
+
+{% block style %}
+  <link rel="stylesheet" href={% static "styles/edit.css" %}>
+{% endblock style %}
+
+{% block title %}{{student.firstName}} {{student.lastName}}{% endblock %} 
+
+
+
+
+
+
+
+{% block content %}
+<section>
+  <div class="wrapper">
+    <div class="profile">
+      <div class="content">
+        <h1>Edit Profile</h1>
+        <form id="edit">
+        <!-- first name -->
+          <fieldset>
+            <div class="grid-35">
+              <label for="fname">First Name</label>
+            </div>
+            <div class="grid-65">
+              <input type="text" id="fname" tabindex="1" value="{{student.firstName}}" />
+            </div>
+          </fieldset>
+           <!-- Last name-->
+          <fieldset>
+            <div class="grid-35">
+              <label for="lname">Last Name</label>
+            </div>
+            <div class="grid-65">
+              <input type="text" id="lname" tabindex="2" value="{{student.lastName}}" />
+            </div>
+          </fieldset>
+
+          </fieldset>
+          <!--Student ID-->
+          <fieldset>
+            <div class="grid-35">
+              <label for="studentID">Student ID</label>
+            </div>
+            <div class="grid-65">
+              <input type="text" id="ID" tabindex="8" value="{{student.id}}" />
+            </div>
+          </fieldset>
+          <!-- GPA -->
+          <fieldset>
+            <div class="grid-35">
+              <label for="GPA">GPA</label>
+            </div>
+            <div class="grid-65">
+              <input type="text" id="GPA" tabindex="5" value="{{student.GPA}}" />
+            </div>
+          </fieldset>
+         <!-- Status -->
+         <fieldset>
+            <div class="grid-35">
+              <label for="Status">Status</label>
+            </div>
+            <div class="grid-65">
+			<select name="work" id="Status" tabindex="7">
+                <option value="Active" 
+				{% if student.status == 'Active' %}	selected
+				{% endif %}>Active</option>
+                <option value="Inactive" 
+				{% if student.status == 'Inactive' %}
+				selected
+				{% endif %}>Inactive</option>
+			</select>
+            </div>
+          </fieldset>
+          <!-- Email -->
+          <fieldset>
+            <div class="grid-35">
+              <label for="email">Email Address</label>
+            </div>
+            <div class="grid-65">
+              <input type="email" id="email" tabindex="6" value="{{student.email}}" />
+            </div>
+          </fieldset>
+          <!-- Birth Date -->
+          <fieldset>
+            <div class="grid-35">
+                <label for="Date of Birth">Birth Date</label>
+              </div>
+              <div class="grid-65">
+                <input type="date" name="date" id="date" tabindex="6" 
+				value= "{% if student.birthdate %}{{ student.birthdate|date:'Y-m-d' }}{% endif %}">
+              </div>
+        
+         </fieldset>
+         <!-- Gender -->
+          <fieldset>
+            <div class="grid-35">
+              <label for="Gender">Gender</label>
+            </div>
+            <div class="grid-65">
+              <select name="work" id="Gender" tabindex="7">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+            </div>
+          </fieldset>
+          <!-- department -->
+          <fieldset>
+            <div class="grid-35">
+              <label for="Department">Department</label>
+            </div>
+            <input class="department"  id="dept" name="status" readonly="de" type="text" value="{{student.department}}" >
+          </fieldset>
+          <!-- mobile number -->
+          <fieldset>
+            <div class="grid-35">
+              <label for="mobile">Mobile Number</label>
+            </div>
+            <div class="grid-65">
+              <input type="text" id="mobile" tabindex="12"
+				value="{{student.phone}}"
+			  />
+            </div>
+          </fieldset>
+
+           
+            <!-- <input type="submit" class="Btn" value="Save Changes" /> -->
+            <button class="Btn" >Save Changes</button>
+            <button class="Btn delete" type="button">Delete</button>
+            
+          
+    
+        </form>
+      </div>
+    </div>
+  </div>
+</section> 
+
+
+<script src={% static "scripts/student.js" %}></script>
+
+{% endblock content %}

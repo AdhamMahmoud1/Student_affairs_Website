@@ -1,0 +1,110 @@
+
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block style %}
+<head>
+  <link rel="stylesheet" href={% static "styles/add.css" %}>
+  <link rel="stylesheet" href={% static "styles/add.css" %}>
+</head>
+{% endblock style %}
+
+{% block content %}
+<form method="POST" action="{% url 'students:add_student' %}" id="stud" enctype="multipart/form-data">
+  <!-- the token is for security -->
+  {% csrf_token %}
+    <div>
+        <p><h3>Please fill the following fields:</h3></p>
+    </div>
+    <section>
+        <label for="firstName">First Name: </label>
+        <input type="text" name="firstName" id="fname" placeholder="Enter Student name">
+    </section>
+
+    <section>
+        <label for="lastName">Last Name: </label>
+        <input type="text" name="lastName" id="lname" placeholder="Enter Student name">
+    </section>
+
+    <section>
+        <label for="id">Student ID: </label>
+        <input type="number" name = "id"  id="id" placeholder="20210000" min="20200000">
+    </section>
+
+    <section>
+        <label for="mail">E-mail: </label>
+        <input type="email" name = "email" id="mail" placeholder="student@mail.com">
+    </section>
+
+    <section>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" placeholder="+20 " name = "phone">
+    </section>
+
+    <section>
+        <label for="level">Level: </label>
+        <select name="level" id="level">
+            <option value="level 1">Level 1</option>
+            <option value="level 2">Level 2</option>
+            <option value="level 3">Level 3</option>
+            <option value="level 4">Level 4</option>
+        </select>
+    </section>
+
+    <section>
+        <label for="dep">Department: </label>
+        <select name="department" id="dep">
+            <optgroup>
+                <option value="CS">Computer Science (CS)</option>
+                <option value="IS">Information Systems (IS)</option>
+                <option value="IT">Information Technology (IT)</option>
+                <option value="AI">Artificial Intelligence (AI)</option>
+                <option value="DS">Decision Support (DS)</option>
+              
+            </optgroup>
+        </select>
+    </section>
+    
+    <section>
+        <label for="GPA" >GPA: </label>
+        <input type="text" id="GPA" min="0" max="4" name="GPA">
+    </section>
+    <section>
+        <label>Status: </label>
+        <select type="radio" name="status" id="active">
+            <optgroup>
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+            </optgroup>
+        </select>
+    </section>
+
+
+    <div>
+        <label for="birthdate">Birth Date: </label>
+        <input type="date" id="bdate" name="birthdate">
+        
+    </div>
+
+    <section>
+        <label for="gender">Gender:</label >
+        <select type="radio" name="gender" id="gender">
+            <optgroup>
+                <option value="Male" name="Male">Male</option>
+                <option value="Female" name="Female">Female</option>
+            </optgroup>
+        </select>
+    </section>
+
+
+      <button type="submit" id="submit">Submit</button>
+      <input type="reset" name="reset">
+   
+</form>
+
+
+<!-- commented the script -->
+<!-- <script src= {% static "scripts/add.js" %} ></script>
+ -->
+{% endblock content %}

@@ -1,0 +1,65 @@
+{% extends 'main.html' %}
+
+
+{% load static %}
+
+{% block style %}
+  <link rel="stylesheet" href={% static "styles/home.css" %}>
+{% endblock style %}
+
+{% block title %}Home{% endblock %} 
+
+
+
+
+{% block content %}
+
+        
+ 
+
+        
+
+
+<!-- main section-->
+<section class="main">
+    <div class="welcoming">
+        <h1>Students Affairs Website</h1><br>
+        <p>The College of Computer Science and Artificial Intelligence strives to be a leading educational and research institution in the field of computing and community development in light of international quality standards.</p>
+        <a href="#search-section" class="main-button">Manage Students</a> 
+    </div>
+
+    <!-- Register -->
+    <div class="register">
+        <p> Don't have an account?</p>
+        <div class="registeration-button">
+            <a href="#"> Sign up</a>     
+        </div>
+    </div>
+</section>
+
+
+
+<!-- search for student by name seaction -->
+<section id="search-section">
+    <h2 class="title">search a student by name</h2>
+    
+    <div class="searching-box">
+        <form class>
+            <input type="text" name="" placeholder="which student are you looking for?"> 
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer>
+    <h4 id="rights">Copyright © 2023 Faculty of Computers and Artificial Intelligence</p>
+</footer>
+
+
+<!-- script files -->
+<script src= {% static "scripts/Home.js" %}></script>
+
+
+{% endblock content %}
