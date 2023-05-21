@@ -1,0 +1,224 @@
+@import url('./custom.css');
+
+nav{
+  border-bottom: 3px solid var(--green);
+  min-height: 55px;
+}
+
+.container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+
+  margin: auto;
+}
+
+.logo{
+  width: 50px;
+}
+
+.nav-list-container{
+  display: flex;
+  /*padding top and bottom*/
+  padding-block: 0.5rem;
+  gap: 3rem;
+  color: var(--black);
+}
+
+.nav-list-container ul{
+  display: flex;
+  list-style: none;
+  text-transform: capitalize;
+  gap: 3rem;
+}
+.nav-list-container ul li a,
+.login-button,
+.submit-btn
+{
+  transition: 0.25s;
+}
+.nav-list-container ul li a:hover{
+  color: var(--green);
+  font-weight: bold;
+}
+.login-button:hover,
+.submit-btn:hover{
+  color: var(--green);
+  background-color: var(--white);
+  border: var(--green) 1px solid;
+}
+
+.logo-container
+{
+  padding-top: 10px;
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-button{
+  outline: none;
+  border: none;
+  width: 120px;
+  background-color: var(--green);
+  color: var(--white);
+  border-radius: 19px;
+  font-size: 1rem;
+  cursor: pointer;
+  /* height: 44px; */
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-button button{
+  color: white;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-size: 1.1rem;
+}
+.login-button:hover button{
+  color: var(--green);
+}
+
+
+
+
+.hamburger{
+  display: none;
+  cursor: pointer;
+}
+
+
+
+.bar{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: var(--black);
+}
+
+
+/*Drop down list styling*/
+.dropdown-list{
+  position: relative;
+}
+
+
+
+.dropdown-list .dropdown-container{
+  display: none;
+}
+.dropdown-list .dropdown-container.viewed{
+  display: block;
+  position: absolute;
+  background-color: var(--green);
+  width: 120px;
+  padding: 0;
+  margin-top: 5px;
+  z-index: 999999;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.dropdown-list .dropdown-container.viewed{
+  display: block;
+  position: absolute;
+  background-color: var(--green);
+  width: 180px;
+  padding: 0;
+  margin-top: 5px;
+  z-index: 999999;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-list .dropdown-container.viewed li{
+  padding: 7px 4px;
+  border: rgba(0,0,0,0.2) 2px solid;
+  
+}
+
+.dropdown-list .dropdown-container.viewed li a{
+  color: var(--white);
+}
+
+@media(max-width:1024px){
+  .hamburger{
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2){
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-list{
+    position: fixed;
+    z-index: 9999;
+    left: -100%;
+    top: 82px;
+    gap: 0;
+    flex-direction: column;
+    background-color: var(--green);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    margin: 0;
+    padding: 0.8rem 0;
+  }
+  .nav-list li{
+    margin: 16px 0;
+    /* border-bottom: var(--white) solid 3px; */
+  }
+  .nav-list li a{
+    color: var(--white);
+    font-weight: bold;
+    font-size: 1.3rem;
+  }
+
+  .nav-list-container ul li a:hover{
+    color: var(--white);
+    
+  }
+
+  .nav-list.active{
+    left: 0;
+    flex-direction: column;
+    
+  }
+  .login-button{
+    display: none;
+  }
+
+  .dropdown-list{
+    margin-bottom: 0;
+  }
+  
+  .dropdown-list .dropdown-container.viewed{
+    position: static;
+    margin: 0 auto;
+    background-color: var(--white);
+    color: var(--green);
+    /* border: 1px ; */
+  }
+  .dropdown-list .dropdown-container.viewed li a{
+    color: var(--green);
+    /* border: 1px ; */
+  }
+  .dropdown-list .dropdown-container.viewed li{
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 0 0;
+    /* border: 1px ; */
+  }
+  .nav-list-container ul{
+    gap: 0.5rem;
+  }
+}

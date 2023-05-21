@@ -1,0 +1,106 @@
+
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block style %}
+<head>
+  <link rel="stylesheet" href={% static "styles/add.css" %}>
+</head>
+{% endblock style %}
+
+{% block content %}
+<form action="" id="stud" method="get" target="_blank">
+    <div>
+        <p><h3>Please fill the following fields:</h3></p>
+    </div>
+    <section>
+        <label for="name">First Name: </label>
+        <input type="text" name="name" id="fname" placeholder="Enter Student name">
+    </section>
+
+    <section>
+        <label for="name">Last Name: </label>
+        <input type="text" name="name" id="lname" placeholder="Enter Student name">
+    </section>
+
+    <section>
+        <label for="id">Student ID: </label>
+        <input type="number" id="id" placeholder="20210000" min="20200000">
+    </section>
+
+    <section>
+        <label for="mail">E-mail: </label>
+        <input type="email" id="mail" placeholder="student@mail.com">
+    </section>
+
+    <section>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" placeholder="+20 ">
+    </section>
+
+    <section>
+        <label for="level">Level: </label>
+        <select name="Level" id="level">
+            <option value="level 1">Level 1</option>
+            <option value="level 2">Level 2</option>
+            <option value="level 3">Level 3</option>
+            <option value="level 4">Level 4</option>
+        </select>
+    </section>
+
+    <section>
+        <label for="dep">Department: </label>
+        <select name="department" id="dep">
+            <optgroup>
+                <option value="CS">Computer Science (CS)</option>
+                <option value="IS">Information Systems (IS)</option>
+                <option value="IT">Information Technology (IT)</option>
+                <option value="AI">Artificial Intelligence (AI)</option>
+                <option value="DS">Decision Support (DS)</option>
+              
+            </optgroup>
+        </select>
+    </section>
+    
+    <section>
+        <label for="gpa" >GPA: </label>
+        <input type="text" id="gpa" min="0" max="4">
+    </section>
+    <section>
+        <label>Status: </label>
+        <select type="radio" name="status" id="active">
+            <optgroup>
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+            </optgroup>
+        </select>
+    </section>
+
+
+    <div>
+        <label for="bdate">Birth Date: </label>
+        <input type="date" id="bdate" name="bdate">
+        
+    </div>
+
+    <section>
+        <label for="gender">Gender:</label >
+        <select type="radio" name="gender" id="gender">
+            <optgroup>
+                <option value="Male" name="Male">Male</option>
+                <option value="Female" name="Female">Female</option>
+            </optgroup>
+    </section>
+
+    <section>
+        <input type="submit" id="submit" name="submit">
+        <input type="reset" name="reset">
+    </section>
+</form>
+
+
+
+<script src= {% static "scripts/add.js" %} ></script>
+
+{% endblock content %}

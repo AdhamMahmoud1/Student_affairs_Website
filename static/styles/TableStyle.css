@@ -1,0 +1,186 @@
+/* navbar styling */
+@import url(../styles/navbar.css);
+
+:root{
+
+    --searchFiled-txt-color: #360d0d;
+    
+    --searchFiled-placeholder-color: gray;
+
+    --table-txt-color: #fff; 
+    --table-firstRow-color: #e3e3e3;
+  
+
+    --stateSwitch-active-color:var(--green);
+    --stateSwitch-inactive-color: gray;
+}
+
+
+/* ------------------------------------------- */
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 5rem;
+}
+.search-Container{
+    display: block;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputSearch{
+    margin-bottom: 10px;
+    width: 400px; 
+    height: 50px;
+    padding: 10px 5px;
+    border-radius: 9px;
+    font-size: 16px;
+
+}
+
+.Search-icon{
+    width: 2px;
+    height: 4rem;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 30px 0px 30px 0;
+    /* padding: 10px 2px;
+    color: white;
+    background: #a81805;
+    border-radius: 30px; */
+}
+
+#myInput {
+    display: inline-flex;
+    width: 340px;
+    height: 40px;
+    margin: 10px 0 15px;
+    padding: 10px 10px 4px 45px; /* added space for the icon */
+    border: 1px solid var(--light-green);
+    border-radius: 8px;
+    color: var(--searchFiled-txt-color);
+    font-size: 20px;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAh9JREFUSEuVln9VwzAQxz+ngEkABescDAegABwwHICDzgE4wAGggDoACUPB8S65tZcl4UH+2Pqy9i7fX7cKtgTQdNVc1c++kb7+8Gy/sncXtN8/Nmg0sy1fQiq03HQO3IFsBR0yQJlA34A98NVGX3aUDsIxFw+r5mkEvc939GEUCJIQwoTK2kV5BqzZ5K0GYIdw45xNCBuDXdEYdIrn9JPLN+g2N4vnm58aUIyqM4Q9yq5nlojgXNBPN9NGYCqMVbEgA+iHn+4iadKwW2iQqDDe9yC7E8EbTku0PGmmy0TPKBqKHLfNIWtgM3P+awDSY6aJoZgENi3EEYE7MemV0fpHLwfe/1jXIC2BLUTOhdR/lVnWXlRjkrP1zBSrmsfcs09R5LQaD2ljQPhAeQe2rdzUIkfbNaVdqAN9Am482ZaPDkW5kI2GT78pC90bZJm6o02/XWy3aflQRrDsjQh3qBxAL0OCT7GYe14FVgqPwMMfgjb3sbFgdrVlFOxD6KywZeU2GMHSfilwONowzv6oQWNkhK3SUUbLKHClwhpNs8oQH06hFg0WptKVaWLp3AqsFayoFTJtRjSNa7OmzSRDPDeJZ4k2zRZoCFvFIQZQWKHy5lMgNVnogvx/UNmrMn05ZU6PqI4k0SXXoC9xLvVP3RlehZjL4YwuC9tc3Ap3NIhSlXOhF40wEYo3iI6L6rDESdh6Afktk42B8N+txozwEj8v3uYd7Eux4wAAAABJRU5ErkJggg==');
+    background-repeat: no-repeat;
+    background-position: 10px center; /* moved the icon to the left */
+    box-shadow: 1px 8px 10px rgba(0, 0, 0, .2);
+}
+
+#myInput::placeholder {
+    color: var(--searchFiled-placeholder-color);
+    width: 100%;
+}
+
+/* ----------------------------------------- */
+table{
+    border-collapse: collapse;
+    width: 800px;
+    height: auto;
+}
+
+table thead th{
+    text-align: center;
+    background-color: var(--green);
+    color: var(--table-txt-color);
+    padding: 10px 30px 5px 8px;
+    margin: auto;
+    font-weight: bold;
+}
+table td{
+    border: 1px solid var(--table-firstRow-color);
+    padding: 5px;
+}
+table tr:nth-child(even) td{
+    background-color: var(--white-green);
+}
+/* --------------------------------------------- */
+input[type=checkbox].toggle{
+    display: none;
+}
+
+input[type=checkbox].toggle + label{
+    display: inline-block;
+    height: 30px;
+    width: 100px;
+    position: relative;
+    font-size: 10px;
+    border: 2px solid black;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+input[type=checkbox].toggle + label:before{
+    position:absolute;
+    top: 4px;
+    height: 20px;
+    width: 25px;
+    content: '';
+    transition: all 0.3 ease;
+    z-index: 3;
+}
+input[type=checkbox].toggle + label:after{
+    width: 70px;
+    text-align: center;
+    z-index: 2;
+    text-transform: uppercase;
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+input[type=checkbox].toggle:not(:checked) + label{
+    background-color: transparent;
+    text-align: right;
+    border-color: var(--stateSwitch-inactive-color);
+}
+input[type=checkbox].toggle:not(:checked) + label:after{
+    content: attr(data-unchecked);
+    right: 0;
+    left: auto;
+    opacity: 1;
+    color: var(--stateSwitch-inactive-color);
+}
+input[type=checkbox].toggle:not(:checked) + label:before{
+    left: 4px;
+    background-color: var(--stateSwitch-inactive-color);
+}
+input[type=checkbox].toggle:checked + label{
+    text-align: left;
+    border-color: var(--stateSwitch-active-color);
+}
+
+
+input[type=checkbox].toggle:checked + label:after{
+    content: attr(data-checked);
+    left: 0px;
+    right: auto;
+    opacity: 1;
+    color: var(--stateSwitch-active-color);
+    border-color: var(--stateSwitch-active-color); 
+}
+
+input[type=checkbox].toggle:checked + label:before{
+    left: 68px;
+    background-color: var(--stateSwitch-active-color); 
+}
+
+
+tr:hover{
+  background-color: var(--light-green);
+  cursor: pointer;
+}
+
+tr.selected{
+  background-color: var(--light-green);
+}
+
+.edit-btn{
+  padding: 20px 80px;
+}

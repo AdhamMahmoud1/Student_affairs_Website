@@ -1,0 +1,83 @@
+{% load static %}
+
+<nav>
+  <div class="container">
+    <a href="./Home.html" class="logo-container">
+      <img src={% static "assets/cu-logo.png" %} alt="" class="logo">
+    </a>
+    
+
+    <div class="nav-list-container">
+      <ul class="nav-list">
+        <li><a href="#" id="home">Home</a></li>
+        <li class="dropdown-list">
+          <a href= "#" id = "hyperlink">Students info</a>
+          
+          <ul class="dropdown-container">
+            <li><a href="#" id="add_student">Add new student</a></li>
+            <li><a href="#" id="dep_assignment">Department assignment page</a></li>
+            <li><a href= "#" id = "all_students" >All students</a></li>
+          </ul> 
+    
+        </li>
+        <li><a href="#" id="about">About</a></li>
+      </ul>
+      <a href="#" class="login-button" id="login"><button>Login</button></a>
+    </div>
+    <div class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<!-- NAVBAR Navigation using javascript instead of django -->
+<script>
+  let hyperlink = document.getElementById("hyperlink");
+  hyperlink.addEventListener("click", (event)=> {  event.preventDefault();
+  })
+
+  let allStudentsLink = document.querySelector("#all_students")
+  allStudentsLink.addEventListener('click',(event)=>{
+    event.preventDefault();
+    window.location.href = "/students"
+  })
+
+  let home = document.querySelector("#home")
+  home.addEventListener('click',(event)=>{
+    event.preventDefault();
+    window.location.href = "/";
+  })
+
+  let add_student = document.querySelector("#add_student")
+  add_student.addEventListener('click',(event)=>{
+    event.preventDefault();
+    window.location.href = "/students/add-student";
+  })
+
+  let dep_assignment = document.querySelector("#dep_assignment")
+  dep_assignment.addEventListener('click',(event)=>{
+    event.preventDefault();
+    window.location.href = "/students/department-assignment";
+  })
+
+
+  let about = document.querySelector("#about")
+  about.addEventListener('click',(event)=>{
+    event.preventDefault();
+    window.location.href = "/about";
+  })
+
+
+  let login = document.querySelector("#login")
+  login.addEventListener('click',(event)=>{
+    event.preventDefault();
+    window.location.href = "/login";
+  })
+
+
+</script>

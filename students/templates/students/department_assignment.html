@@ -1,0 +1,67 @@
+{% extends 'main.html' %}
+
+
+{% load static %}
+
+{% block style %}
+  <link rel="stylesheet" href={% static "styles/department.css" %}>
+{% endblock style %}
+
+{% block title %}Department Assignment{% endblock %} 
+
+
+
+{% block content %}
+  <main>
+    <!-- <i class="fa fa-solid fa-magnifying-glass"></i> -->
+    
+    <div class="search-container">
+      <label id="serch">Search</label>
+      <div class="search-box">
+        <input type="search" id="txt" placeholder="Enter the student's ID">
+        <button  type="button" id="mybutton">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <form>
+      <h1>Students Info</h1>
+      <div id="field">
+          <div id="name">
+              <span class="nme">Name:</span>
+              <span id="nm" class="data"></span>
+          </div>
+          <div id="id">
+              <span class="nme">ID:</span>
+              <span id="idd" class="data"></span>
+          </div>
+          <div id="lev">
+              <span class="nme">Level:</span>
+              <span id="level" class="data"></span>
+          </div>
+          <div id="sel">
+            <label for="dep" class="nme">Department:</label>
+            <select name="department" id="dep">
+                <option value="CS">CS</option>
+                <option value="IT">IT</option>
+                <option value="AI">AI</option>
+                <option value="IS">IS</option>
+                <option value="DS">DS</option>
+            </select>
+          </div>
+      </div>
+      <button type="button" id = "submit-btn">Save</button>
+    </form>
+
+
+  </main>
+
+
+
+
+  
+  <script src={% static "scripts/depar.js" %}></script>
+
+
+{% endblock content %}

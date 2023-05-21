@@ -1,0 +1,178 @@
+@import url(../styles/navbar.css);
+
+
+section
+{
+    padding: 100px 200px;
+    border-bottom: 5px solid var(--green);
+
+}
+
+.main
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url(../assets/cairo_university.jpeg);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+#search-section
+{
+    box-shadow: 100px 50px 100px rgba(1 1 1 / 50);
+    padding-bottom: 10%;
+
+}
+
+.register
+{
+    color: transparent;
+}
+
+.register a
+{
+    color: transparent;
+}
+.welcoming
+{
+    color: #ffff;
+    width:  100%;
+    padding: 100px 200px;
+    /* border: 5px solid white;    */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.welcoming h1
+{
+    font-size: 3em;
+    margin-bottom: 0px;
+}
+
+
+.welcoming p
+{
+    margin-top: 2px;
+    font-size: 1em;
+    margin-bottom: 50px ;
+
+}
+
+.main-button
+{
+    color: var(--green);
+    background-color: var(--white);
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 1em 3em;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    transition: 0.7s ease;
+}
+.main-button:hover
+{
+    background-color: var(--green);
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+#search-section
+{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.searching-box
+{
+
+    width: 100%;
+    height: 25vh;
+    padding: 5px;
+    background-image: linear-gradient(rgba(31,171,113, 0.9), rgba(31,171,113, 0.9));
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.searching-box form
+{
+    width: 100%;
+    max-width: 700px;
+    background:white;
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
+
+
+.searching-box form input
+{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline:  none;
+    padding: 24px 20px;
+    font-size: 20px;
+    color: black;
+
+}
+
+.searching-box form button
+{
+    border: none;
+    background: none;
+
+}
+
+form .fa-search
+{
+    align-self: center;
+    padding: 10px 20px;
+    font-size: 3em;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.title
+{
+    display: flex;
+    justify-content: center;
+    color: var(--green);
+    font-size: 2.2em;
+    font-weight: 800;
+    text-transform: capitalize;
+    margin-top: 0px;
+    margin-bottom: 70px;
+
+}
+
+footer
+{
+    background-color: var(--green);
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 1.15rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align:center;
+    margin:0 auto;
+}

@@ -1,0 +1,187 @@
+
+@import url("../styles/navbar.css");
+
+
+
+/* 
+
+.main-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.main-links li a {
+    color: #F4F4F4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.main-links li a:hover {
+    color: #F29E4C;
+}
+
+.student-information-links {
+    display: none;
+    position: absolute;
+    background-color: #F4F4F4;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #CCCCCC;
+    z-index: 1;
+}
+
+.student-information-links li {
+    display: block;
+    padding: 10px;
+}
+
+.student-information-links li a {
+    color: #444444;
+    text-decoration: none;
+}
+
+.student-information-links li a:hover {
+    color: #F29E4C;
+}
+
+li:hover .student-information-links {
+    display: block;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #CCCCCC;
+    margin-bottom: 20px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #CCCCCC;
+    margin-bottom: 20px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #2B2D42;
+    color: #F4F4F4;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #F29E4C;
+} */
+
+
+form {
+    padding: 0 30px;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* hide default radio button appearance */
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* create custom radio button appearance */
+
+
+/* style label elements */
+label {
+    margin-right: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    display: inline;
+    background-color: var(--light-grey);
+    color: var(--green);
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: var(--green);
+    color: #333;
+}
+
+
+form {
+    flex-grow: 1;
+    padding-block: 50px;
+}
+
+label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--green);
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid var(--light-grey);
+    margin-bottom: 20px;
+}
+
+
+input{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid var(--light-grey);
+    margin-bottom: 20px;
+
+}
