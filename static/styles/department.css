@@ -18,7 +18,7 @@
   box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
 } */
 
-main { 
+.main-form { 
   padding-top: 80px;
   height: 100%;
   width: 90%;
@@ -91,7 +91,7 @@ main {
   
 }
 
-form{
+.info-form{
   width: 70%;
   margin: 0 auto;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -100,7 +100,7 @@ form{
   position: relative;
 }
 
-form h1{
+.info-form h1{
   text-align: center;
   color: var(--green);
 
@@ -139,7 +139,7 @@ select:focus option{
   font-size: 1rem;
   font-weight: 400;
 }
-form button{
+.info-form button{
   position: absolute;
   left: 50%;
   bottom: 55px;
@@ -161,14 +161,14 @@ form button{
 
 
 
-form button:hover{
+.info-form button:hover{
   background-color: var(--white);
   border: 1px solid var(--green);
   color: var(--green);
 }
 
 @media (max-width : 768px) {
-  main{
+  .main-form{
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
   }

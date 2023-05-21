@@ -12,6 +12,6 @@ urlpatterns = [
   path('',views.allStudents, name= "all_students"),
   #see specific student data using student ID
   path('<int:id>',views.student),
-  path('add-student',views.addStudent),
-  path('department-assignment',views.departmentAssignment)
+  path('add-student',views.addStudent, name= 'add_student'),
+  path('department-assignment',views.departmentAssignment, name = "department_assignment")
 ]
