@@ -17,7 +17,7 @@ section
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url(../assets/cairo_university.jpeg);
     background-size: cover;
     background-position: center;
-    
+
 }
 
 #search-section
@@ -176,3 +176,86 @@ footer
     text-align:center;
     margin:0 auto;
 }
+
+
+
+@media (min-width: 850px) and (max-width: 1100px)
+{
+    .welcoming
+    {
+        padding: 0px 0px;
+
+    }
+
+    footer
+    {
+        font-size: 0.9em;
+    }
+
+}
+
+
+
+@media (min-width: 500px) and (max-width: 850px)
+{
+    section
+    {
+        padding: 0px 0px;
+    }
+    .welcoming
+    {
+        padding: 0px 30px;
+    }
+
+    footer
+    {
+        font-size: 1em;
+    }
+}
+
+
+
+@media (min-width:0px) and (max-width: 500px)
+{
+    section
+    {
+        padding: 0px 0px;
+    }
+
+    .welcoming
+    {
+        padding: 0px 0px;
+    }
+
+    .welcoming h1
+    {
+        font-size: 2em;
+    }
+
+
+    .title
+    {
+        text-align: center;
+        font-size: 1.3em;
+    }
+
+
+    form .fa-search
+    {
+        padding: 0px;
+        font-size: 2em;
+    }
+
+    .searching-box form input
+    {
+        padding: 11px 0px;
+        font-size: 1em;
+    }
+
+    footer
+    {
+        font-size: 0.6em;
+    }
+}
+
+
