@@ -1,0 +1,49 @@
+
+{% extends 'main.html' %}
+
+
+{% load static %}
+
+{% block style %}
+  <link rel="stylesheet" href={% static "styles/login.css" %}>
+{% endblock style %}
+
+{% block title %}login{% endblock %} 
+
+
+
+
+
+
+
+{% block content %}
+
+
+  
+  <form>
+      <div class="form-conatiner">
+        <h1 class="form-heading">login</h1>
+        
+        <div class="form-data">
+          
+          <div class="id-input">
+            <label for="user-id">ID</label>
+            <input type="text" placeholder="Type your ID" name="user-id" required>
+            <i class="fa fa-solid fa-id-card id-icon"></i>
+          </div>
+
+          <div class="password-input">
+            <label for="pass">Password</label>
+            <input type="password" placeholder="Type your password" name="pass" required>
+            <i class="fa fa-solid fa-lock password-icon"></i>
+          </div>
+          
+          
+        </div>
+        <button type="submit" class="submit-btn">Login</button>
+        
+      </div>
+
+    </form>
+
+{% endblock content %}

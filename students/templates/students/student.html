@@ -21,14 +21,15 @@
     <div class="profile">
       <div class="content">
         <h1>Edit Profile</h1>
-        <form id="edit">
+        <form id="edit" method="POST" action={% url 'students:edit' student.id  %} >
+          {% csrf_token %}
         <!-- first name -->
           <fieldset>
             <div class="grid-35">
               <label for="fname">First Name</label>
             </div>
             <div class="grid-65">
-              <input type="text" id="fname" tabindex="1" value="{{student.firstName}}" />
+              <input type="text" id="fname" tabindex="1" value="{{student.firstName}}" name="firstName" />
             </div>
           </fieldset>
            <!-- Last name-->
@@ -37,7 +38,7 @@
               <label for="lname">Last Name</label>
             </div>
             <div class="grid-65">
-              <input type="text" id="lname" tabindex="2" value="{{student.lastName}}" />
+              <input type="text" id="lname" tabindex="2" value="{{student.lastName}}" name="lastName"/>
             </div>
           </fieldset>
 
@@ -48,7 +49,7 @@
               <label for="studentID">Student ID</label>
             </div>
             <div class="grid-65">
-              <input type="text" id="ID" tabindex="8" value="{{student.id}}" />
+              <input type="text" id="ID" tabindex="8" value="{{student.id}}" name="id" />
             </div>
           </fieldset>
           <!-- GPA -->
@@ -57,7 +58,7 @@
               <label for="GPA">GPA</label>
             </div>
             <div class="grid-65">
-              <input type="text" id="GPA" tabindex="5" value="{{student.GPA}}" />
+              <input type="text" id="GPA" tabindex="5" value="{{student.GPA}}" name="GPA" />
             </div>
           </fieldset>
          <!-- Status -->
@@ -66,7 +67,7 @@
               <label for="Status">Status</label>
             </div>
             <div class="grid-65">
-			<select name="work" id="Status" tabindex="7">
+			<select name="status" id="Status" tabindex="7">
                 <option value="Active" 
 				{% if student.status == 'Active' %}	selected
 				{% endif %}>Active</option>
@@ -83,7 +84,7 @@
               <label for="email">Email Address</label>
             </div>
             <div class="grid-65">
-              <input type="email" id="email" tabindex="6" value="{{student.email}}" />
+              <input type="email" id="email" tabindex="6" value="{{student.email}}" name="email" />
             </div>
           </fieldset>
           <!-- Birth Date -->
@@ -92,8 +93,8 @@
                 <label for="Date of Birth">Birth Date</label>
               </div>
               <div class="grid-65">
-                <input type="date" name="date" id="date" tabindex="6" 
-				value= "{% if student.birthdate %}{{ student.birthdate|date:'Y-m-d' }}{% endif %}">
+                <input type="date" name="birthdate" id="date" tabindex="6" 
+                value= "{% if not dt %}{{ student.birthdate|date:'Y-m-d' }}{% else %}{{student.birthdate}}{% endif %}">
               </div>
         
          </fieldset>
@@ -103,7 +104,7 @@
               <label for="Gender">Gender</label>
             </div>
             <div class="grid-65">
-              <select name="work" id="Gender" tabindex="7">
+              <select name="gender" id="Gender" tabindex="7">
                 <option value="Male">Male</option>
                 <option value="Female">Female</option>
               </select>
@@ -114,7 +115,7 @@
             <div class="grid-35">
               <label for="Department">Department</label>
             </div>
-            <input class="department"  id="dept" name="status" readonly="de" type="text" value="{{student.department}}" >
+            <input class="department"  id="dept" name="department" readonly="de" type="text" value="{{student.department}}" >
           </fieldset>
           <!-- mobile number -->
           <fieldset>
@@ -123,15 +124,15 @@
             </div>
             <div class="grid-65">
               <input type="text" id="mobile" tabindex="12"
-				value="{{student.phone}}"
+				value="{{student.phone}}" name = "phone"
 			  />
             </div>
           </fieldset>
 
            
             <!-- <input type="submit" class="Btn" value="Save Changes" /> -->
-            <button class="Btn" >Save Changes</button>
-            <button class="Btn delete" type="button">Delete</button>
+            <button class="Btn" name="save" >Save Changes</button>
+            <button class="Btn delete" type="button" name = "delete">Delete</button>
             
           
     
@@ -143,5 +144,6 @@
 
 
 <script src={% static "scripts/student.js" %}></script>
+
 
 {% endblock content %}

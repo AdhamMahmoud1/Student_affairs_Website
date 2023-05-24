@@ -1,8 +1,10 @@
 
-
+*{
+  box-sizing: border-box;
+}
 
 form {
-  padding: 0px 30px;
+  padding: 0px 7rem;
 }
 
 h1 {
@@ -46,7 +48,7 @@ input[type="reset"] {
 
 input[type="submit"]:hover,
 input[type="reset"]:hover {
-    background-color: var(--green);
+    background-color: red;
     color: #333;
 }
 
@@ -81,4 +83,28 @@ input{
     border: 1px solid var(--light-grey);
     margin-bottom: 20px;
 
+}
+
+
+#submit{
+  width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: var(--green);
+    border: none;
+    color: #ffff;
+    margin-bottom: 20px;
+}
+
+#submit:hover{
+  background-color: #ffff;
+  color: var(--green);
+  border: 2px solid var(--green);
+}
+
+@media (max-width : 650px) {
+  form{
+    padding: 0 2.5rem;
+  }
 }
