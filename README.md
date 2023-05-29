@@ -3,7 +3,7 @@
 ```
 python3 -m venv env
 ```
-## 2- clone the repo inside the virtual enviroment directory
+## 2- clone the repo inside the virtual environment directory
 ## 3- activate virtual environment
 ```
 Scripts\activate
