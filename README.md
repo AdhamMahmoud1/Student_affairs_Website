@@ -1,5 +1,5 @@
 # Student affairs Website
-## 1- install a virtual enviroment
+## 1- install a virtual environment
 ```
 python3 -m venv env
 ```
