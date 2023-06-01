@@ -44,8 +44,8 @@
     <h2 class="title">search a student by name</h2>
     
     <div class="searching-box">
-        <form class>
-            <input type="text" name="" placeholder="which student are you looking for?"> 
+        <form id = "form">
+            <input name = "student_name" type="text"  placeholder="which student are you looking for?" class="student_name"> 
             <button type="submit"><i class="fas fa-search"></i></button>
         </form>
     </div>
@@ -59,7 +59,36 @@
 
 
 <!-- script files -->
-<script src= {% static "scripts/Home.js" %}></script>
+<script>
+
+  let form = document.querySelector("#form");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let search_input = document.querySelector(".student_name").value;
+
+// Get the current URL
+  console.log(window.location.href)
+  var url = new URL(window.location.href + "students");
+
+  // Create a new URLSearchParams object based on the current URL's search params
+  var searchParams = new URLSearchParams(url.search);
+
+  // Add a new search parameter
+  searchParams.set('name', search_input);
+
+  // Update the URL's search property with the updated search params
+  url.search = searchParams.toString();
+
+  // Get the modified URL
+  var modifiedUrl = url.toString();
+
+
+    
+    window.location.href = modifiedUrl;
+  })
+
+</script>
 
 
 {% endblock content %}
