@@ -50,31 +50,10 @@ passwordInput.addEventListener("input", (e) => {
 
 // check ID and Password from local storage
 
-let admin = {
-  id : '20210543',
-  password : 'mohamedhesham123'
-}
-
-
 localStorage.setItem("admin",JSON.stringify(admin))
 
-let form = document.querySelector("form")
 
-form.addEventListener("submit",(e)=>{
-  e.preventDefault();
-  const idInput = document.querySelector(".id-input input").value
-  const passwordInput = document.querySelector(".password-input input").value
-  
-  let adminData = JSON.parse(localStorage.getItem("admin"))
 
-  if(idInput === adminData.id && passwordInput === adminData.password){
-    alert("Logged in successful")
-    const url = 'home.html';
-    window.location.href = url;
-  }else{
-    alert("invalid data")
-  }
-})
 
 
 
