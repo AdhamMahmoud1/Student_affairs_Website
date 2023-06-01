@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-
+from django.contrib import messages
 from .models import Student
 # Create your views here.
 from .forms import StudentForm
@@ -52,8 +52,10 @@ def departmentAssignment(request):
   if request.method == 'POST':
     if "search" in request.POST :
       student_id = request.POST.get('id')
+	 
       # print(student_id)
       student = get_object_or_404(Student, id=student_id)
+	
       return render(request, 'students/department_assignment.html', {'student': student})
     elif "save" in request.POST:
       student_id = request.POST.get('id')

@@ -27,6 +27,7 @@ urlpatterns = [
     path('students/',include('students.urls', namespace= "students")),
     path('about/',include('about.urls', namespace= "about")),
     path('login/',include('login.urls', namespace= "login")),
+    path('login/',include('django.contrib.auth.urls')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
