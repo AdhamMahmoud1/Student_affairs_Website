@@ -1,4 +1,7 @@
-
+// regex function
+function onlyLettersAndSpaces(str) {
+  return /^[A-Za-z\s]*$/.test(str);
+}
 // validating input 
 const idInputContainer = document.querySelector(".id-input")
 const passwordContainer = document.querySelector(".password-input")
@@ -7,7 +10,7 @@ const passwordInput = document.querySelector(".password-input input")
 
 
 let idWarningMsg = document.createElement("span")
-idWarningMsg.textContent = "* ID Must only contain numbers"
+idWarningMsg.textContent = "* Username Must only contain alphabets"
 idWarningMsg.classList.add("warning");
 
 
@@ -25,7 +28,7 @@ studentsInfoLink.addEventListener("click", ()=> {
 
 // Used input event listener instead of change
 idInput.addEventListener("input", (e) => {
-    if(isNaN(e.target.value) === false){
+    if(onlyLettersAndSpaces(e.target.value) === true){
         idInput.classList.remove("wrong-input")
         idInputContainer.removeChild(idWarningMsg)
     }else{
@@ -48,9 +51,9 @@ passwordInput.addEventListener("input", (e) => {
     }
 })
 
-// check ID and Password from local storage
 
-localStorage.setItem("admin",JSON.stringify(admin))
+
+
 
 
 

@@ -20,15 +20,17 @@
 
 
   
-  <form>
+  <form method="POST" >
+    {% csrf_token %}
+
       <div class="form-conatiner">
         <h1 class="form-heading">login</h1>
         
         <div class="form-data">
           
           <div class="id-input">
-            <label for="user-id">ID</label>
-            <input type="text" placeholder="Type your ID" name="user-id" required>
+            <label for="user-id">Username</label>
+            <input type="text" placeholder="Type your name" name="user-id" required>
             <i class="fa fa-solid fa-id-card id-icon"></i>
           </div>
 
@@ -40,7 +42,7 @@
           
           
         </div>
-        <button type="submit" class="submit-btn">Login</button>
+        <button type="submit" class="submit-btn"  >Login</button>
         
       </div>
 
