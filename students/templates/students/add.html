@@ -43,8 +43,9 @@
     </section>
 
     <section>
-        <label for="level">Level: </label>
-        <select name="level" id="level">
+      <label for="level">Level: </label>
+      <select name="level" id="level">
+          <option value= "">none</option>
             <option value="level 1">Level 1</option>
             <option value="level 2">Level 2</option>
             <option value="level 3">Level 3</option>
@@ -53,9 +54,10 @@
     </section>
 
     <section>
-        <label for="dep">Department: </label>
+        <label for="dep" id="dep_h">Department: </label>
         <select name="department" id="dep">
             <optgroup>
+                <!-- <option value="null">general</option> -->
                 <option value="CS">Computer Science (CS)</option>
                 <option value="IS">Information Systems (IS)</option>
                 <option value="IT">Information Technology (IT)</option>
@@ -103,6 +105,28 @@
    
 </form>
 
+
+
+<script>
+  let level = document.querySelector('#level');
+  let dep = document.querySelector('#dep');
+  let dep_h = document.querySelector('#dep_h');
+  console.log('js')
+  level.addEventListener("change",() => {
+    if (level.value == "level 3" || level.value == "level 4"){
+      console.log("allowed")
+      dep.style.display = "block";
+      dep_h.style.display = "block";
+      
+      
+    }else{
+      dep.style.display = "none";
+      dep_h.style.display = "none";
+      dep_h.value = "null";
+    }
+  })
+  
+</script>
 
 <!-- commented the script -->
 <!-- <script src= {% static "scripts/add.js" %} ></script>
