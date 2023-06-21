@@ -59,8 +59,8 @@
 
 
 <!-- script files -->
+{% if authenticated %}
 <script>
-
   let form = document.querySelector("#form");
 
   form.addEventListener("submit", (e) => {
@@ -87,8 +87,20 @@
     
     window.location.href = modifiedUrl;
   })
-
 </script>
+
+{% else %}
+<script>
+  let form_ = document.querySelector("#form");
+
+  form_.addEventListener("submit", (e) => {
+    e.preventDefault();
+    alert("You have to log in to perform this action.");
+  });
+</script>
+
+{% endif %}
+
 
 
 {% endblock content %}
