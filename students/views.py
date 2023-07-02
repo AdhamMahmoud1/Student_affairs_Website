@@ -25,6 +25,8 @@ def student(request, id):
             student_details.birthdate = request.POST.get('birthdate')
             correctDateFormate = True
             student_details.email = request.POST.get('email')
+            student_details.status=request.POST.get('status')
+            student_details.level=request.POST.get('level')
             student_details.phone = request.POST.get('phone')
             student_details.gender = request.POST.get('gender')
             student_details.save()
@@ -34,6 +36,7 @@ def student(request, id):
 
     context = {'student': student_details, 'dt': correctDateFormate}
     return render(request, "students/student.html", context)
+
 
 
 def departmentAssignment(request):
