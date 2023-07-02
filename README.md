@@ -1,6 +1,6 @@
 # Student Affairs Website
 
-The Student Affairs website helps set of admins to manage the information and resources of students.
+The Student Affairs Website is a web application developed as our final project in the Web Technology course during our second year of Computer Science, It serves as a comprehensive system for managing student information and department-related tasks. This user-friendly website allows authorized users to perform various operations such as adding, updating, and deleting student data, as well as assigning departments and managing student statuses.
 
 ## Table of Contents
 - [Prerequisites](#prerequisites)
