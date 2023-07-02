@@ -30,6 +30,8 @@ def student(request, id):
             student_details.phone = request.POST.get('phone')
             student_details.gender = request.POST.get('gender')
             student_details.save()
+            return redirect(reverse('students:all_students'))
+
         else:
             student_details.delete()
             return redirect(reverse('students:all_students'))
