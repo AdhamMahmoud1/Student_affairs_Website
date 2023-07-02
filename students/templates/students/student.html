@@ -61,7 +61,7 @@
               <input type="text" id="GPA" tabindex="5" value="{{student.GPA}}" name="GPA" />
             </div>
           </fieldset>
-         <!-- Status -->
+          <!-- Status -->
          <fieldset>
             <div class="grid-35">
               <label for="Status">Status</label>
@@ -75,6 +75,29 @@
 				{% if student.status == 'Inactive' %}
 				selected
 				{% endif %}>Inactive</option>
+			</select>
+            </div>
+          </fieldset>
+          <!-- Level -->
+          <fieldset>
+            <div class="grid-35">
+              <label for="Level">Level</label>
+            </div>
+            <div class="grid-65">
+			<select name="level" id="Level" tabindex="7">
+        <option value="Level 1" 
+				{% if student.level == 'Level 1' %}	selected
+				{% endif %}>Level 1</option>
+        <option value="Level 2" 
+				{% if student.level == 'Level 2' %}	selected
+				{% endif %}>Level 2</option>
+        <option value="Level 3" 
+				{% if student.level == 'Level 3' %}	selected
+				{% endif %}>Level 3</option>
+        <option value="Level 4" 
+				{% if student.level == 'Level 4' %}	selected
+				{% endif %}>Level 4</option>
+        
 			</select>
             </div>
           </fieldset>
