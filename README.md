@@ -1,6 +1,6 @@
 # Student Affairs Website
 
-The Student Affairs website provides information and resources for students at our university.
+The Student Affairs website helps set of admins to manage the information and resources of students.
 
 ## Table of Contents
 - [Prerequisites](#prerequisites)
@@ -63,8 +63,8 @@ The Student Affairs website is primarily designed for administrators who have al
 1. Open a web browser and navigate to `http://localhost:8000`.
 2. Click on the "Log In" button in the navigation bar.
 3. Enter the provided login credentials (username: admin, password: *********) and click "Log In".
-4. Explore the different sections like events, news, and support services.
-5. Perform administrative actions such as creating events, managing content, and accessing reports.
+4. Explore the different pages like home, about, and student related pages.
+5. Perform administrative actions such as add new student, displaying all students, updating info of selected student, and assign department to student .
 
 Note: As a regular user, you will have limited access to certain features and administrative functionalities.
 
