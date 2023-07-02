@@ -30,5 +30,6 @@ db.sqlite3
 *.sublime-workspace
 
 # Dependencies
+env/
 venv/
 pipenv/
