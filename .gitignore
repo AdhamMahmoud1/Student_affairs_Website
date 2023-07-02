@@ -1,0 +1,34 @@
+# Django project
+*.pyc
+__pycache__/
+*.sqlite3
+*.env
+
+# Secret keys
+*.secret_key
+*.settings_secret
+
+# Media files
+media/
+
+# Static files
+staticfiles/
+
+# Local development files
+db.sqlite3
+.env
+
+# IDE-specific files
+.vscode/
+.idea/
+*.pydevproject
+*.pyc
+*~
+*.swp
+*.bak
+*.tmp
+*.sublime-workspace
+
+# Dependencies
+venv/
+pipenv/
