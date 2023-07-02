@@ -39,19 +39,29 @@ def student(request, id):
 
 
 
+
 def departmentAssignment(request):
     if request.method == 'POST':
         if "search" in request.POST:
             student_id = request.POST.get('id')
-            student = get_object_or_404(Student, id=student_id)
-            return render(request, 'students/department_assignment.html', {'student': student})
+            if student_id:
+                try:
+                    student = Student.objects.get(id=student_id)
+                    return render(request, 'students/department_assignment.html', {'student': student})
+                except Student.DoesNotExist:
+                    messages.error(request, 'Could not find the student.')
+            # Handle the case when the search box is empty
         elif "save" in request.POST:
             student_id = request.POST.get('id')
-            new_department = request.POST.get('department')
-            student = get_object_or_404(Student, id=student_id)
-            student.department = new_department
-            student.save()
-            return render(request, 'students/department_assignment.html', {'student': student, 'assigned': True})
+            if student_id:
+                new_department = request.POST.get('department')
+                try:
+                    student = Student.objects.get(id=student_id)
+                    student.department = new_department
+                    student.save()
+                    return render(request, 'students/department_assignment.html', {'student': student, 'assigned': True})
+                except Student.DoesNotExist:
+                    messages.error(request, 'Could not find the student.')
 
     return render(request, 'students/department_assignment.html')
 
