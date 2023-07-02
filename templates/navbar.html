@@ -54,13 +54,13 @@
 <!-- NAVBAR Navigation using javascript instead of django -->
 <script>
 
-
-    document.addEventListener('DOMContentLoaded', function() {
-      var logout = document.getElementById('logout');
-    
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    var logout = document.getElementById('logout');
+  
       logout.addEventListener('click', function(event) {
         event.preventDefault(); // Prevent the default behavior of the <a> tag
-    
+  
         var xhr = new XMLHttpRequest();
         xhr.open('POST', '{% url "home:home" %}'); // Replace 'my-view' with the actual URL name of your Django view
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -68,7 +68,7 @@
           if (xhr.status === 200) {
             // Handle the response from the Django view
             alert('Logged out successfully!');
-            location.reload();
+            window.location.href = '{% url "home:home" %}'; // Redirect to the home page
           } else {
             // Handle any errors that occur during the AJAX request
             alert('An error occurred.');
@@ -77,8 +77,8 @@
         xhr.send('csrfmiddlewaretoken=' + encodeURIComponent('{{ csrf_token }}')); // Include the CSRF token for security
       });
     });
-
-    
+  
+      
 
 
   let hyperlink = document.getElementById("hyperlink");
