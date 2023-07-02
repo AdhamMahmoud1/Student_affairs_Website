@@ -65,7 +65,14 @@
 
   
   <!-- <script src={% static "scripts/depar.js" %}></script> -->
-
+  <!-- incase student not found print this message -->
+  {% if messages %}
+    <script>
+      {% for message in messages %}
+        alert('{{ message }}');
+      {% endfor %}
+    </script>
+  {% endif %}
 
 
   <!-- Show successfully assigned daprtment alert -->
