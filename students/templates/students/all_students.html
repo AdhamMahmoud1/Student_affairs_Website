@@ -88,20 +88,18 @@
     
     const rows = document.querySelectorAll('table tr');
     
-    rows.forEach(function(row) {
-      row.addEventListener('click', function(event) {
-        const cells = event.target.parentElement.querySelectorAll('td');
-        const id = cells[0].textContent;
-    
-        
-    
-        window.location.href = window.location.href + id;
-    
-        
-      });
+
+  rows.forEach(function(row) {
+    row.addEventListener('click', function(event) {
+      const cells = event.target.parentElement.querySelectorAll('td');
+      const id = cells[0].textContent;
+
+      const editURL = "{% url 'students:edit' id=0 %}".replace("0", encodeURIComponent(id));
+      window.location.href = editURL;
     });
+  });
+
     
-    console.log("hello")
     
     function homeSearch(){
       let searchParam = new URL(window.location.href).searchParams.get("name");

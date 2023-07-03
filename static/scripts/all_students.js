@@ -39,10 +39,9 @@ rows.forEach(function(row) {
   });
 });
 
-console.log("hello")
 
 function homeSearch(){
-  let searchParam = new URL(window.location.href).searchParams.get("name");
+  let searchParam = new URL(window.location.href).searchParams.get("search");
   let input = document.getElementById("myInput");
   input.value = searchParam;
   console.log(searchParam)
