@@ -22,7 +22,7 @@ The Student Affairs Website is a web application developed as our final project 
 
 1. Install a virtual environment by running the following command:
 ```
-python3 -m venv env
+python -m venv env
 ```
 
 2. Clone the repository inside the virtual environment directory.
@@ -45,9 +45,9 @@ pip install -r requirements.txt
 
 5. Start the project by running the following commands:
 ```
-python3 manage.py makemigrations
-python3 manage.py migrate
-python3 manage.py runserver
+python manage.py makemigrations
+python manage.py migrate
+python manage.py runserver
 ```
 
 > **Note:** Make sure you have Python and pip installed on your system before executing these commands. The `requirements.txt` file contains a list of all the required packages and versions for the project. The `pip install -r requirements.txt` command will install these packages in your virtual environment.

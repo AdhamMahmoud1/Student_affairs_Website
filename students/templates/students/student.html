@@ -11,10 +11,6 @@
 
 
 
-
-
-
-
 {% block content %}
 <section>
   <div class="wrapper">
@@ -78,29 +74,21 @@
 			</select>
             </div>
           </fieldset>
-          <!-- Level -->
-          <fieldset>
-            <div class="grid-35">
-              <label for="Level">Level</label>
-            </div>
-            <div class="grid-65">
-			<select name="level" id="Level" tabindex="7">
-        <option value="Level 1" 
-				{% if student.level == 'Level 1' %}	selected
-				{% endif %}>Level 1</option>
-        <option value="Level 2" 
-				{% if student.level == 'Level 2' %}	selected
-				{% endif %}>Level 2</option>
-        <option value="Level 3" 
-				{% if student.level == 'Level 3' %}	selected
-				{% endif %}>Level 3</option>
-        <option value="Level 4" 
-				{% if student.level == 'Level 4' %}	selected
-				{% endif %}>Level 4</option>
-        
-			</select>
-            </div>
-          </fieldset>
+         <!-- Level -->
+        <fieldset>
+          <div class="grid-35">
+            <label for="Level">Level</label>
+          </div>
+          <div class="grid-65">
+            <select name="level" id="Level" tabindex="7">
+              <option value="Level 1" {% if student.level == 'level 1' %}selected{% endif %}>Level 1</option>
+              <option value="Level 2" {% if student.level == 'level 2' %}selected{% endif %}>Level 2</option>
+              <option value="Level 3" {% if student.level == 'level 3' %}selected{% endif %}>Level 3</option>
+              <option value="Level 4" {% if student.level == 'level 4' %}selected{% endif %}>Level 4</option>
+            </select>
+          </div>
+        </fieldset>
+
           <!-- Email -->
           <fieldset>
             <div class="grid-35">
@@ -121,15 +109,15 @@
               </div>
         
          </fieldset>
-         <!-- Gender -->
+          <!-- Gender -->
           <fieldset>
             <div class="grid-35">
               <label for="Gender">Gender</label>
             </div>
             <div class="grid-65">
               <select name="gender" id="Gender" tabindex="7">
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
+                <option value="Male" {% if student.gender == 'Male' %}selected{% endif %}>Male</option>
+                <option value="Female" {% if student.gender == 'Female' %}selected{% endif %}>Female</option>
               </select>
             </div>
           </fieldset>
@@ -166,6 +154,9 @@
   </div>
 </section> 
 
+<!-- Debug: Print student.level -->
+<!-- <p>Debug: student.level = {{ student.level }}</p>
+<p>Debug: student.level = {{ student.gender }}</p> -->
 
 <script src={% static "scripts/student.js" %}></script>
 
