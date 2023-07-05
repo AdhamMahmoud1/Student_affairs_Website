@@ -11,10 +11,6 @@
 
 
 
-
-
-
-
 {% block content %}
 <section>
   <div class="wrapper">
@@ -113,15 +109,15 @@
               </div>
         
          </fieldset>
-         <!-- Gender -->
+          <!-- Gender -->
           <fieldset>
             <div class="grid-35">
               <label for="Gender">Gender</label>
             </div>
             <div class="grid-65">
               <select name="gender" id="Gender" tabindex="7">
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
+                <option value="Male" {% if student.gender == 'Male' %}selected{% endif %}>Male</option>
+                <option value="Female" {% if student.gender == 'Female' %}selected{% endif %}>Female</option>
               </select>
             </div>
           </fieldset>
@@ -160,6 +156,7 @@
 
 <!-- Debug: Print student.level -->
 <p>Debug: student.level = {{ student.level }}</p>
+<p>Debug: student.level = {{ student.gender }}</p>
 
 <script src={% static "scripts/student.js" %}></script>
 
